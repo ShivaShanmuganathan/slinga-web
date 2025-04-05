@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/config";
 export function Footer() {
   return (
     <footer className="flex flex-col gap-y-5 rounded-lg px-7 py-5 container">
-      <div className="flex items-center justify-between">
+      {/* <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-2">
           <Icons.logo className="h-5 w-5" />
           <h2 className="text-lg font-bold text-foreground">
@@ -39,7 +39,7 @@ export function Footer() {
         <div className="flex items-center justify-between text-sm font-medium tracking-tight text-muted-foreground">
           <p>{siteConfig.footer.bottomText}</p>
         </div>
-      </div>
+      </div> */}
       <BorderText
         text={siteConfig.footer.brandText}
         className="text-[clamp(3rem,15vw,10rem)] overflow-hidden font-mono tracking-tighter font-medium"

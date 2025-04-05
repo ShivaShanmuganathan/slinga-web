@@ -31,8 +31,12 @@ const data = [
 
 export default function Component() {
   return (
-    <Section title="How it works" subtitle="Just 3 steps to get started">
-      <Features data={data} />
-    </Section>
+    <div >
+      <Section title="How it works" subtitle="Just 3 steps to get started">
+        <div className="border overflow-hidden relative text-center py-16 mx-auto">
+          <Features data={data} />
+        </div>
+      </Section>
+    </div>
   );
 }

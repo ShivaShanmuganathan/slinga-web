@@ -33,9 +33,9 @@ export const siteConfig = {
   hero: {
     title: "SLINGA DEV",
     description:
-      "Create powerful AI agent workflows with just a few lines of code, enabling complex task automation and decision-making processes.",
+      "Slinga Dev is a Web3 development studio specializing in secure, scalable smart contracts. With three years of hands-on experience, we turn blockchain ideas into powerful, production-ready dApps.",
     cta: "Get Started",
-    ctaDescription: "Available for all major programming languages",
+    ctaDescription: "Secure smart contracts. Delivered fast.",
   },
   features: [
     {
