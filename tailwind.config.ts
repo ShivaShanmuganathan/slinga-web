@@ -74,7 +74,6 @@ const config = {
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
   		keyframes: {
   			marquee: {
@@ -128,14 +127,6 @@ const config = {
   				},
   				'100%': {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
-  				}
-  			},
-  			'marquee-vertical': {
-  				from: {
-  					transform: 'translateY(0)'
-  				},
-  				to: {
-  					transform: 'translateY(calc(-100% - var(--gap)))'
   				}
   			}
   		},
