@@ -25,7 +25,7 @@ function HeroPill() {
         🛠️ New
       </div>
       <p className="text-xs font-medium text-primary sm:text-sm">
-        Introducing AI Agent SDK
+        Introducing SLINGA DEV
       </p>
       <svg
         width="12"

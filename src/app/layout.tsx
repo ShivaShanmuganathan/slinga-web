@@ -1,3 +1,5 @@
+import Navbar from "@/components/navbar";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -41,7 +43,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {children}
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Navbar />
+          </TooltipProvider>
           <ThemeToggle />
           <TailwindIndicator />
         </ThemeProvider>
