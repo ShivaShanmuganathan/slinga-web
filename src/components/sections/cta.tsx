@@ -125,66 +125,63 @@ export function CTA() {
 
   return (
     <section id="cta">
-      <div className="py-14">
-        <div className="container flex w-full flex-col items-center justify-center p-4">
-          <div className="relative flex w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-[2rem] border">
-            <Marquee
-              reverse
-              className="-delay-[200ms] [--duration:20s]"
-              repeat={4}
-            >
-              {randomTiles1.map((review, idx) => (
-                <Card key={idx} {...review} />
-              ))}
-            </Marquee>
-            <Marquee reverse className="[--duration:30s]" repeat={4}>
-              {randomTiles2.map((review, idx) => (
-                <Card key={idx} {...review} />
-              ))}
-            </Marquee>
-            <Marquee
-              reverse
-              className="-delay-[200ms] [--duration:20s]"
-              repeat={4}
-            >
-              {randomTiles3.map((review, idx) => (
-                <Card key={idx} {...review} />
-              ))}
-            </Marquee>
-            <Marquee reverse className="[--duration:30s]" repeat={4}>
-              {randomTiles4.map((review, idx) => (
-                <Card key={idx} {...review} />
-              ))}
-            </Marquee>
-            <div className="absolute z-10">
-              <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-                <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
-              </div>
-              <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
-                <h1 className="text-3xl font-bold lg:text-4xl">
-                  Start your dev work with Slinga
-                </h1>
-                <p className="mt-2">
-                  Contact
-                </p>
-                {/* <Link
-                  href="/"
-                  className={cn(
-                    buttonVariants({
-                      size: "lg",
-                      variant: "outline",
-                    }),
-                    "group mt-4 rounded-[2rem] px-6",
-                  )}
-                > */}
-                  Get Started
-                  <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
-                {/* </Link> */}
-              </div>
-              <div className="absolute inset-0 -z-10 rounded-full  bg-white opacity-40 blur-xl dark:bg-black" />
+      <div className="container flex w-full flex-col items-center justify-center py-12 px-4 md:py-16 lg:py-20">
+        <div className="relative flex w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-[2rem] border">
+          <Marquee
+            reverse
+            className="-delay-[200ms] [--duration:20s]"
+            repeat={4}
+          >
+            {randomTiles1.map((review, idx) => (
+              <Card key={idx} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse className="[--duration:30s]" repeat={4}>
+            {randomTiles2.map((review, idx) => (
+              <Card key={idx} {...review} />
+            ))}
+          </Marquee>
+          <Marquee
+            reverse
+            className="-delay-[200ms] [--duration:20s]"
+            repeat={4}
+          >
+            {randomTiles3.map((review, idx) => (
+              <Card key={idx} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse className="[--duration:30s]" repeat={4}>
+            {randomTiles4.map((review, idx) => (
+              <Card key={idx} {...review} />
+            ))}
+          </Marquee>
+          <div className="absolute z-10">
+            <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
+              <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
             </div>
-            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-white to-70% dark:to-black" />
+            <div className="z-10 mt-8 flex flex-col items-center text-center text-primary">
+              <h1 className="text-3xl font-bold lg:text-4xl">
+                Start your dev work with Slinga
+              </h1>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Contact
+              </p>
+              <button
+                className={cn(
+                  buttonVariants({
+                    size: "lg",
+                    variant: "outline",
+                  }),
+                  "group mt-6 rounded-[2rem] px-8",
+                )}
+              >
+                Get Started
+                <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
+              </button>
+            </div>
+            <div className="absolute inset-0 -z-10 rounded-full  bg-white opacity-40 blur-xl dark:bg-black" />
           </div>
+          <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-white to-70% dark:to-black" />
         </div>
       </div>
     </section>
