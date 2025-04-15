@@ -3,7 +3,6 @@
 import { Icons } from "@/components/icons";
 import { Section } from "@/components/section";
 import { BorderText } from "@/components/ui/border-number";
-import { siteConfig } from "@/lib/config";
 import ThreeDCardDemo from "@/components/3d-card-demo";
 import Link from "next/link";
 
@@ -25,9 +24,24 @@ const stats = [
   },
 ];
 
-export function GrowthSection() {
-  const { items } = siteConfig.growthSection;
+const projectCards = [
+  {
+    id: 1,
+    title: "Crypto Unicorns",
+    description: "A fully on-chain game where players collect, breed, and battle mythical unicorns across farming, crafting, and PvP modes. Generated $45M+ in NFT volume, $26M through its token sale, and peaked at 50K daily active players.",
+    imageUrl: "/cu.jpg",
+    link: "/blog/how-3d-works",
+  },
+  {
+    id: 2,
+    title: "Neo Olympus",
+    description: "A fully onchain battleground strategy game where players command Mecha Gods or Titan Kaiju. Built on Base using the DN404, Diamond Standard, Uniswap, and the MUD framework.",
+    imageUrl: "/neo-olympus.png",
+    link: "/blog/how-3d-works",
+  }
+];
 
+export function GrowthSection() {
   return (
     <Section title="PREVIOUS PROJECTS" subtitle="Deployed. Trusted. Proven.">
       <div className="border-x border-t">
@@ -83,12 +97,17 @@ export function GrowthSection() {
 
           {/* 3D Cards Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0">
-            {items.map((item) => (
+            {projectCards.map((project) => (
               <div
-                key={item.id}
+                key={project.id}
                 className="flex items-stretch justify-stretch"
               >
-                <ThreeDCardDemo />
+                <ThreeDCardDemo
+                  title={project.title}
+                  description={project.description}
+                  imageUrl={project.imageUrl}
+                  link={project.link}
+                />
               </div>
             ))}
           </div>
