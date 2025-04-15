@@ -30,14 +30,14 @@ const projectCards = [
     title: "Crypto Unicorns",
     description: "A fully on-chain game where players collect, breed, and battle mythical unicorns across farming, crafting, and PvP modes. Generated $45M+ in NFT volume, $26M through its token sale, and peaked at 50K daily active players.",
     imageUrl: "/cu.jpg",
-    link: "/blog/how-3d-works",
+    link: "/blog/crypto-unicorns",
   },
   {
     id: 2,
     title: "Neo Olympus",
     description: "A fully onchain battleground strategy game where players command Mecha Gods or Titan Kaiju. Built on Base using the DN404, Diamond Standard, Uniswap, and the MUD framework.",
     imageUrl: "/neo-olympus.png",
-    link: "/blog/how-3d-works",
+    link: "/blog/neo-olympus",
   }
 ];
 
