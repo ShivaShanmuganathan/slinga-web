@@ -7,19 +7,19 @@ import Link from "next/link";
 
 const stats = [
   {
-    title: "10K+",
-    subtitle: "Stars on GitHub",
-    icon: <Icons.github className="h-5 w-5" />,
+    title: "250+",
+    subtitle: "Smart Contracts Deployed",
+    icon: <Icons.filetext className="h-5 w-5" />,
   },
   {
     title: "50K+",
-    subtitle: "Discord Members",
-    icon: <Icons.discord className="h-5 w-5" />,
+    subtitle: "nSLOC of Solidity Code",
+    icon: <Icons.code className="h-5 w-5" />,
   },
   {
-    title: "1M+",
-    subtitle: "Downloads",
-    icon: <Icons.npm className="h-5 w-5" />,
+    title: "$70M+",
+    subtitle: "Onchain value secured",
+    icon: <Icons.rocket className="h-5 w-5" />,
   },
 ];
 
