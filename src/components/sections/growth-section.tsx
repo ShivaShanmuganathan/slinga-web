@@ -4,6 +4,7 @@ import { Icons } from "@/components/icons";
 import { Section } from "@/components/section";
 import { BorderText } from "@/components/ui/border-number";
 import ThreeDCardDemo from "@/components/3d-card-demo";
+import { ThreeDMarqueeDemo } from "@/components/3d-marquee-demo";
 import Link from "next/link";
 
 const stats = [
@@ -110,6 +111,11 @@ export function GrowthSection() {
                 />
               </div>
             ))}
+          </div>
+
+          {/* 3D Marquee Demo */}
+          <div className="border-t">
+            <ThreeDMarqueeDemo />
           </div>
         </div>
       </div>

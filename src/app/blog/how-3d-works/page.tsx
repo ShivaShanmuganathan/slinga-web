@@ -1,6 +1,6 @@
 import { Section } from "@/components/section";
 import { SectionHeader } from "@/components/section-header";
-import { Blog } from "@/components/sections/blog";
+import Blog from "@/components/sections/blog";
 import Image from "next/image";
 import { Suspense } from "react";
 import { InteractiveDemo } from "./interactive-demo";
