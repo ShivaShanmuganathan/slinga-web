@@ -14,12 +14,12 @@ import { motion } from "motion/react";
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
-  name: "SLINGA DEV",
+  name: "Smart Contract Engineer",
   description: "Create AI Agents with just a few lines of code.",
   cta: "Get Started",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   keywords: [
-    "SLINGA DEV",
+    "Shiva Web3",
     "Multi-Agent Systems",
     "Tool Integration",
     "Workflow Automation",
@@ -139,12 +139,12 @@ export const siteConfig = {
       { text: "Contact", url: "#" },
     ],
     bottomText: "All rights reserved.",
-    brandText: "SLINGA DEV",
+    brandText: "Shiva Web3",
   },
   testimonials: [
     {
       id: 1,
-      text: "The SLINGA DEV has revolutionized how we build intelligent systems. It's incredibly intuitive and powerful.",
+      text: "The Shiva Web3 has revolutionized how we build intelligent systems. It's incredibly intuitive and powerful.",
       name: "Alice Johnson",
       company: "OpenMind Labs",
       image:
@@ -168,7 +168,7 @@ export const siteConfig = {
     },
     {
       id: 4,
-      text: "The SLINGA DEV's tool integration feature has streamlined our workflow automation processes.",
+      text: "The Shiva Web3's tool integration feature has streamlined our workflow automation processes.",
       name: "Diana Evans",
       company: "AutomateX",
       image:
@@ -184,7 +184,7 @@ export const siteConfig = {
     },
     {
       id: 6,
-      text: "The SLINGA DEV's efficiency features have significantly improved our system's performance and scalability.",
+      text: "The Shiva Web3's efficiency features have significantly improved our system's performance and scalability.",
       name: "Fiona Grant",
       company: "ScaleAI",
       image:
@@ -200,7 +200,7 @@ export const siteConfig = {
     },
     {
       id: 8,
-      text: "The SLINGA DEV's multi-agent system has enabled us to build complex, collaborative AI solutions with ease.",
+      text: "The Shiva Web3's multi-agent system has enabled us to build complex, collaborative AI solutions with ease.",
       name: "Hannah Irving",
       company: "CollabAI",
       image:
@@ -216,7 +216,7 @@ export const siteConfig = {
     },
     {
       id: 10,
-      text: "The SLINGA DEV's documentation and support have made our learning curve much smoother.",
+      text: "The Shiva Web3's documentation and support have made our learning curve much smoother.",
       name: "Julia Kim",
       company: "DevAI",
       image:
@@ -224,7 +224,7 @@ export const siteConfig = {
     },
     {
       id: 11,
-      text: "We've seen a significant boost in our AI's decision-making capabilities thanks to the SLINGA DEV.",
+      text: "We've seen a significant boost in our AI's decision-making capabilities thanks to the Shiva Web3.",
       name: "Kevin Lee",
       company: "DecisionTech",
       image:
@@ -240,7 +240,7 @@ export const siteConfig = {
     },
     {
       id: 13,
-      text: "The customization options in the SLINGA DEV have allowed us to create truly unique AI solutions.",
+      text: "The customization options in the Shiva Web3 have allowed us to create truly unique AI solutions.",
       name: "Michael Chen",
       company: "UniqueAI",
       image:
@@ -248,7 +248,7 @@ export const siteConfig = {
     },
     {
       id: 14,
-      text: "The efficiency of the SLINGA DEV has significantly reduced our development time and costs.",
+      text: "The efficiency of the Shiva Web3 has significantly reduced our development time and costs.",
       name: "Natalie Wong",
       company: "FastTrackAI",
       image:

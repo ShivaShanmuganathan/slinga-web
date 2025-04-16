@@ -94,7 +94,6 @@ export default function NeoOlympus() {
       {/* Related Articles */}
       <div className="mb-24">
         <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading related articles...</div>}>
-          {/* @ts-expect-error Async Server Component */}
           <Blog />
         </Suspense>
       </div>

@@ -22,10 +22,10 @@ function HeroPill() {
       transition={{ duration: 0.8, ease }}
     >
       <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-left text-xs font-medium text-primary sm:text-sm">
-        🛠️ New
+        🛡️ Security First Approach
       </div>
       <p className="text-xs font-medium text-primary sm:text-sm">
-        Introducing SLINGA DEV
+      {/* For a Living */}
       </p>
       <svg
         width="12"

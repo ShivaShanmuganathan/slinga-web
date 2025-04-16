@@ -1,8 +1,6 @@
 import { CTA } from "@/components/sections/cta";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
-
-import { Statistics } from "@/components/sections/statistics";
 import HowItWorks from "@/components/sections/how-it-works";
 import { GrowthSection } from "@/components/sections/growth-section";
 import Logos from "@/components/sections/logos";

@@ -85,9 +85,7 @@ export default function How3DWorks() {
 
       {/* Related Articles */}
       <div className="mb-24">
-        {/* <h2 className="text-2xl font-bold tracking-tight text-center mb-8">Related Articles</h2> */}
         <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading related articles...</div>}>
-          {/* @ts-expect-error Async Server Component */}
           <Blog />
         </Suspense>
       </div>

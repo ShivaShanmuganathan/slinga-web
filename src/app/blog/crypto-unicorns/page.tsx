@@ -81,7 +81,7 @@ export default function CryptoUnicorns() {
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Economic Design</h2>
                 <p className="mt-6">
-                  The game's economy is built on a dual-token model with deflationary mechanics and
+                  The game&apos;s economy is built on a dual-token model with deflationary mechanics and
                   carefully balanced sink/source dynamics. This design has proven crucial for long-term
                   sustainability and player engagement.
                 </p>
@@ -94,7 +94,6 @@ export default function CryptoUnicorns() {
       {/* Related Articles */}
       <div className="mb-24">
         <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading related articles...</div>}>
-          {/* @ts-expect-error Async Server Component */}
           <Blog />
         </Suspense>
       </div>
