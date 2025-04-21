@@ -1,5 +1,5 @@
 ---
-title: "Crypto Unicorns: The Evolution of Midcore Skill-Based Gaming"
+title: "Crypto Unicorns"
 description: "Exploring how Crypto Unicorns revolutionized blockchain gaming with its skill-based competitive modes and PvP systems."
 date: "2024-03-20"
 image: "/cu-battle-loop.avif"
@@ -7,24 +7,60 @@ author: "Shiva"
 publishedAt: "2024-03-20"
 ---
 
-# Crypto Unicorns: The Evolution of Midcore Skill-Based Gaming
+# The Evolution of Skill-Based Gaming
 
-Crypto Unicorns has redefined what's possible in blockchain gaming by introducing a sophisticated system of skill-based games that appeal to both casual and competitive players. This article explores the various midcore game modes that have contributed to the project's success.
+Blending strategy, skill, and onchain ownership to redefine competitive gaming in Web3.
 
-## The Battle System: Shadowforge
+## 💻 Technical Implementation
 
-At the core of Crypto Unicorns' competitive gameplay is Shadowforge, a fully on-chain PvP battle system that has revolutionized blockchain gaming.
+The battle loop is powered by the below diamond standard smart contracts:
 
-### Key Features of Shadowforge
+- [Shadowforge](https://github.com/Laguna-Games/cu-osc-shadowforge)
+- [Crypto Unicorns](https://github.com/Laguna-Games/cu-osc-unicorns)
+- [Shadowcorns](https://github.com/Laguna-Games/cu-osc-shadowcorns)
+- [Shadowcorn Items](https://github.com/Laguna-Games/cu-osc-items)
+- [Rituals](https://github.com/Laguna-Games/cu-osc-rituals)
+- [Dark Marks Token](https://github.com/Laguna-Games/cu-osc-dark-marks)
+## 🪄 Twilight Tactics & Shadowforge
 
-- **Queue-Based Matchmaking**: Fair and balanced PvP battles
-- **Skill-Based Rewards**: Players earn Dark Marks based on performance
-- **Seasonal Tournaments**: Regular competitive events with substantial prizes
-- **Faction Wars**: Team-based battles with unique rewards
+**Twilight Tactics** is a fully onchain, faction-based PvP game mode within the Crypto Unicorns universe — designed to pit **Unicorn** and **Shadowcorn** holders against each other in seasonal battles for territory and resources.  
+As Lead Solidity Engineer, I designed and deployed the smart contract architecture powering minion generation, territory-based score tracking, and multi-phase reward distribution.
+
+![Twilight Tactics](/cu-twilight-tactics.webp)
+
+### 🛠️ System Architecture Overview
+
+#### 🛡️ Shadow Forge System
+Built a persistent onchain factory where Shadowcorn holders could create minions.  
+The system supported **thousands of concurrent users**, cooldown management, and seasonal resets across rounds of Twilight Tactics.
+
+#### ⚔️ Faction Battle Engine
+Developed the logic to process minion raids, calculate territorial control, and track live scoring between Unicorn and Shadowcorn factions.  
+Handled **thousands of real-time updates and game events** during active PvP sessions.
+
+#### 🎁 Reward & Leaderboard Infrastructure
+Engineered a scalable system to distribute **lootboxes**, **seasonal tokens**, and **leaderboard rewards**.  
+Integrated **queue-based processing** with **Merkle proof claims**, ensuring fair and gas-efficient reward execution.
+
+#### 🔧 Diamond Standard (ERC-2535)
+Entire system was built using a **modular Diamond architecture**, enabling **facet-level upgrades** and **gas optimization**.  
+
+---
+
+### 🎮 Gameplay Impact
+
+- Enabled large-scale, faction-based battles for territory control with **real in-game incentives**.
+- Shadowcorn holders bred minion armies via the **Shadow Forge** to raid Unicorn lands.
+- Gameplay loop refreshed **every season**, with continuous Forge activity across rounds.
+- Supported strategic PvP on a live, composable economy with **$3M+ TVL** and over **8M+ NFT assets**.
+
+**Twilight Tactics** redefined what fully onchain PvP could look like — combining **real-time coordination**, **economic incentives**, and **decentralized game logic** into a seasonal, competitive experience.
+
 
 ## Game Modes Breakdown
 
 ### 1. Jousting
+![Jousting](/cu-jousting-banner.jpeg)
 A strategic combat system where players:
 - Build custom Unicorn teams
 - Develop unique battle strategies
@@ -32,6 +68,7 @@ A strategic combat system where players:
 - Earn special Jousting-specific rewards
 
 ### 2. Racing
+![Racing](/cu-racing.jpg)
 A high-speed competitive mode featuring:
 - Track customization
 - Unicorn breeding for speed traits
@@ -39,6 +76,7 @@ A high-speed competitive mode featuring:
 - Special racing equipment and upgrades
 
 ### 3. Tribes
+![Tribes](/cu-tribes.jpg)
 A team-based strategy game where players:
 - Form or join tribes
 - Compete in territory control
@@ -46,45 +84,15 @@ A team-based strategy game where players:
 - Earn collective rewards
 
 ### 4. Team RPG
+![Team RPG](/cu-team-rpg.jpg)
+
 A cooperative adventure mode with:
 - Dungeon crawling
 - Boss battles
 - Team composition strategy
 - Unique loot and rewards
 
-## Technical Implementation
 
-The skill-based games are powered by sophisticated smart contracts:
-
-```solidity
-// Simplified Battle System Contract
-contract Shadowforge is ERC2535 {
-    struct Battle {
-        address player1;
-        address player2;
-        uint256[] team1;
-        uint256[] team2;
-        uint256 startTime;
-        BattleResult result;
-    }
-    
-    enum BattleResult { Pending, Player1Win, Player2Win, Draw }
-    
-    function startBattle(
-        address opponent,
-        uint256[] memory team
-    ) public returns (uint256 battleId) {
-        // Battle initialization logic
-    }
-    
-    function resolveBattle(
-        uint256 battleId,
-        BattleResult result
-    ) public {
-        // Battle resolution and reward distribution
-    }
-}
-```
 
 ## Economic Impact
 
@@ -103,16 +111,6 @@ The game features a comprehensive progression system:
 3. **Rewards**: Exclusive NFTs and tokens for top performers
 4. **Leaderboards**: Global and seasonal rankings
 
-## Future Developments
-
-The competitive scene continues to evolve with:
-
-1. **Esports Integration**: Professional tournaments and leagues
-2. **Cross-Game Competitions**: Integration with other blockchain games
-3. **Community Events**: Player-organized tournaments and competitions
-
 ## Conclusion
 
 Crypto Unicorns' midcore skill-based games represent a significant advancement in blockchain gaming. By combining traditional competitive gaming mechanics with blockchain technology, the project has created a sustainable and engaging competitive ecosystem that appeals to both casual and hardcore gamers.
-
-The success of these game modes demonstrates how blockchain games can provide meaningful competitive experiences while maintaining fair and transparent reward systems. 
