@@ -5,6 +5,8 @@ import HowItWorks from "@/components/sections/how-it-works";
 import { GrowthSection } from "@/components/sections/growth-section";
 import Logos from "@/components/sections/logos";
 import Calendar from "@/components/sections/calendar";
+import MarqueeGallery from '@/components/MarqueeGallery';
+
 
 export default function Home() {
   return (
@@ -12,8 +14,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Logos />
+      <MarqueeGallery />
       <GrowthSection />
       <HowItWorks />
+      
       <CTA />
       <Calendar />
     </main>
