@@ -10,93 +10,90 @@ publishedAt: "2024-03-20"
 # Crypto Unicorns: Expanding the Universe with Casual & 2nd Party Games
 
 Crypto Unicorns has successfully created a diverse gaming ecosystem by incorporating casual games and second-party integrations. This approach has helped the project reach a broader audience while maintaining the integrity of its core economy.
+## 🛰️ Satellite Bank System
+
+The Satellite Bank is a modular contract system, built using the Diamond Standard (ERC-2535), designed to support 2nd-party games and applications within the Crypto Unicorns ecosystem. 
+
+
+## 🔗 [Satellite Bank Technical Implementation](https://github.com/Laguna-Games/cu-osc-satbank)
+
+It enables secure, scalable, and customizable in-game economies while maintaining full composability with the core game.
+
+
+#### 🔑 Key Features
+
+- **Isolated Token Balances**  
+  Each integrated game or app maintains its own asset balances, ensuring data separation and game-specific logic.
+
+- **Permission-Based Asset Usage**  
+  Fine-grained controls allow only authorized modules to access or modify token balances.
+
+- **Cross-Game Reward Distribution**  
+  Enables shared reward logic across multiple games while preserving asset isolation.
+
+- **Secure Asset Management**  
+  Ensures reliable tracking, movement, and verification of assets within secondary ecosystems.
+
+#### 🔐 Advanced Capabilities
+
+- **Queue + Server-Side Signing**  
+  Onchain queue system with server-side signature validation to enable fair, tamper-proof reward claims.
+
+- **Role-Based Permissions**  
+  Introduces hierarchical role structures for access control and operational security.
+
+- **App Economy Integration**  
+  Supports publisher-specific logic such as fee handling for in-app purchases.
+
 
 ## The Casual Gaming Experience
 
-### Unigatchi
-A virtual pet simulation game where players:
-- Care for and train their Unicorns
-- Complete daily tasks and challenges
-- Earn rewards through consistent play
-- Socialize with other players' Unicorns
-
 ### Unicorn Party
+![Unicorn Party](/unicorn-party.jpeg)
 A social gaming experience featuring:
 - Mini-games and party activities
 - Social interaction mechanics
 - Event-based rewards
 - Community building features
 
+
+### Unigatchi
+![Unicorn Gatchi](/unigatchi.png)
+A virtual pet simulation game where players:
+- Care for and train their Unicorns
+- Complete daily tasks and challenges
+- Earn rewards through consistent play
+- Socialize with other players' Unicorns
+
+
 ### Rainbow Rumble
+![Rainbow Rumble](/rainbow-rumble.jpg)
 An arcade-style game with:
 - Quick-play mechanics
 - Skill-based challenges
 - Daily tournaments
 - Special power-ups and abilities
 
-## Second-Party Game Integration
-
-### Satellite Bank System
-A revolutionary approach to game integration:
-- Isolated token balances for each game
-- Permission-based asset usage
-- Cross-game reward systems
-- Secure asset management
-
-### Integration Examples
-
-1. **Unicorn Trivia**
-   - Educational game about Crypto Unicorns lore
-   - Rewards players with special knowledge-based items
-   - Connects to main game through Satellite Bank
-
-2. **Unicorn Bingo**
+### Unicorn Bingo
+![Unicorn Bingo](/cu-bingo.jpeg)
    - Social bingo game with special patterns
    - Community events and tournaments
    - Shared rewards pool with main game
 
-3. **Bumpercorns**
+### Bumpercorns
+![Bumpercorns](/cu-bumpercorns.jpeg)
    - Arcade racing game
    - Custom Unicorn skins and abilities
    - Integrated leaderboard system
 
-4. **Mob Run**
+### Mob Run
+![Mob Run](/mob-run.webp)
    - Cooperative survival game
    - Team-based challenges
    - Shared resource pool with main game
 
-## Technical Implementation
 
-The casual and second-party games are supported by the Satellite Bank system:
-
-```solidity
-// Simplified Satellite Bank Contract
-contract SatelliteBank is ERC2535 {
-    struct Game {
-        address gameContract;
-        uint256 maxBalance;
-        mapping(address => uint256) balances;
-    }
-    
-    mapping(string => Game) public games;
-    
-    function depositToGame(
-        string memory gameId,
-        uint256 amount
-    ) public {
-        // Deposit logic with balance checks
-    }
-    
-    function withdrawFromGame(
-        string memory gameId,
-        uint256 amount
-    ) public {
-        // Withdrawal logic with permission checks
-    }
-}
-```
-
-## Economic Integration
+## 💰 Economic Integration
 
 The casual and second-party games contribute to the ecosystem through:
 
@@ -105,7 +102,7 @@ The casual and second-party games contribute to the ecosystem through:
 - **Player Retention**: Multiple entry points for different types of players
 - **Economic Growth**: Additional utility for core game assets
 
-## Player Benefits
+## 🕹️ Player Benefits
 
 1. **Accessibility**
    - Lower entry barriers for new players
@@ -122,17 +119,7 @@ The casual and second-party games contribute to the ecosystem through:
    - Diverse player interactions
    - Community events across games
 
-## Future Developments
-
-The casual and second-party ecosystem continues to grow with:
-
-1. **New Game Additions**: Regular introduction of new casual games
-2. **Enhanced Integration**: Deeper connections between games
-3. **Community Features**: More ways for players to interact
-4. **Mobile Expansion**: Mobile-friendly casual games
-
 ## Conclusion
 
 Crypto Unicorns' approach to casual and second-party games represents a significant innovation in blockchain gaming. By creating an inclusive ecosystem that caters to different types of players, the project has successfully expanded its reach while maintaining the integrity of its core economy.
-
-The success of this approach demonstrates how blockchain games can create diverse gaming experiences that appeal to a wide range of players while maintaining a cohesive economic system. 
+This demonstrates how blockchain games can create diverse gaming experiences that appeal to a wide range of players while maintaining a cohesive economic system. 
