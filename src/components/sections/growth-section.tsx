@@ -25,24 +25,18 @@ const stats = [
   },
 ];
 
-const projectCards = [
-  {
-    id: 1,
-    title: "Crypto Unicorns",
-    description: "A fully on-chain game where players collect, breed, and battle mythical unicorns across farming, crafting, and PvP modes. Generated $45M+ in NFT volume, $26M through its token sale, and peaked at 50K daily active players.",
-    imageUrl: "/cu.jpg",
-    link: "/blog/crypto-unicorns",
-  },
-  {
-    id: 2,
-    title: "Neo Olympus",
-    description: "A fully onchain battleground strategy game where players command Mecha Gods or Titan Kaiju. Built on Base using the DN404, Diamond Standard, Uniswap, and the MUD framework.",
-    imageUrl: "/neo-olympus.png",
-    link: "/blog/neo-olympus",
-  }
-];
+interface Article {
+  title: string;
+  summary: string;
+  image?: string;
+  slug: string;
+}
 
-export function GrowthSection() {
+interface GrowthSectionProps {
+  articles: Article[];
+}
+
+export function GrowthSection({ articles }: GrowthSectionProps) {
   return (
     <Section title="PREVIOUS PROJECTS" subtitle="Deployed. Trusted. Proven.">
       <div className="border-x border-t">
@@ -98,16 +92,16 @@ export function GrowthSection() {
 
           {/* 3D Cards Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0">
-            {projectCards.map((project) => (
+            {articles.map((article) => (
               <div
-                key={project.id}
+                key={article.slug}
                 className="flex items-stretch justify-stretch"
               >
                 <ThreeDCardDemo
-                  title={project.title}
-                  description={project.description}
-                  imageUrl={project.imageUrl}
-                  link={project.link}
+                  title={article.title}
+                  description={article.summary}
+                  imageUrl={article.image || "/default-article.jpg"}
+                  link={`/blog/${article.slug}`}
                 />
               </div>
             ))}

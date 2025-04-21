@@ -36,6 +36,9 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir: string) {
+  if (typeof window !== 'undefined') {
+    throw new Error('getMDXFiles can only be called on the server side');
+  }
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
 
@@ -59,6 +62,9 @@ export async function markdownToHTML(markdown: string) {
 }
 
 export async function getPost(slug: string) {
+  if (typeof window !== 'undefined') {
+    throw new Error('getPost can only be called on the server side');
+  }
   const filePath = path.join("content", `${slug}.mdx`);
   const source = fs.readFileSync(filePath, "utf-8");
   const { content: rawContent, data: metadata } = parseFrontmatter(source);
@@ -77,6 +83,9 @@ export async function getPost(slug: string) {
 }
 
 async function getAllPosts(dir: string) {
+  if (typeof window !== 'undefined') {
+    throw new Error('getAllPosts can only be called on the server side');
+  }
   const mdxFiles = getMDXFiles(dir);
   return Promise.all(
     mdxFiles.map(async (file) => {
@@ -92,5 +101,8 @@ async function getAllPosts(dir: string) {
 }
 
 export async function getBlogPosts() {
+  if (typeof window !== 'undefined') {
+    throw new Error('getBlogPosts can only be called on the server side');
+  }
   return getAllPosts(path.join(process.cwd(), "content"));
 }
