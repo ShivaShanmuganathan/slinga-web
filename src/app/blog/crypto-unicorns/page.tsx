@@ -9,7 +9,7 @@ export default function CryptoUnicorns() {
     <article className="relative">
       {/* Hero Section */}
       <Section>
-        <div className="border-x border-t mb-24">
+        <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
               <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
@@ -299,16 +299,15 @@ export default function CryptoUnicorns() {
               </div>
             </div>
           </div>
-          <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading related articles...</div>}>
-            <Blog />
-          </Suspense>
         </div>
       </Section>
 
       {/* Related Articles */}
-      {/* <div className="mb-24">
-        
-      </div> */}
+      <div className="mb-24">
+        <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading related articles...</div>}>
+            <Blog />
+          </Suspense>
+      </div>
     </article>
   );
 } 

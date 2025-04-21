@@ -17,17 +17,22 @@ export default async function Blog() {
 
   return (
     <>
-      <div className="mx-auto w-full max-w-screen-xl px-2.5 lg:px-20 mt-24">
+      <div className="mx-auto w-full max-w-screen-xl px-2.5 lg:px-20 mt-2">
         <div className="text-center py-16">
           <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Articles
+            Projects & Articles
           </h1>
           <p className="mt-4 text-xl text-muted-foreground">
-            Latest news and updates from {siteConfig.name}
+            Detailed blogs on projects.
           </p>
         </div>
       </div>
-      <div className="min-h-[50vh] bg-white/50 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur-lg">
+      
+      <div className="min-h-[50vh] border-b shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur-lg"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at bottom center, hsl(var(--secondary) / 0.4), hsl(var(--background)))",
+      }}>
         <div className="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-8 px-2.5 py-10 lg:px-20 lg:grid-cols-3">
           {articles.map((data, idx) => (
             <BlogCard key={data.slug} data={data} priority={idx <= 1} />

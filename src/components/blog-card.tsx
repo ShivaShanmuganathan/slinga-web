@@ -13,7 +13,7 @@ export default function BlogCard({
   return (
     <Link
       href={`/blog/${data.slug}`}
-      className="bg-background transition-colors hover:bg-secondary/20 p-4 last:border-b-0 lg:border-r last:lg:border-r-0 border-b lg:border-b-0"
+      className="bg-background transition-colors hover:bg-secondary/20 p-4 border-b lg:border-b lg:last:border-b-0 lg:border-r last:lg:border-r-0"
     >
       {data.image && (
         <Image
