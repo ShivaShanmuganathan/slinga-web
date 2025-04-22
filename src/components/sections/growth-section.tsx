@@ -44,7 +44,7 @@ const projectCards = [
 
 export function GrowthSection() {
   return (
-    <Section title="PREVIOUS PROJECTS" subtitle="Deployed. Trusted. Proven.">
+    <Section title="SHIVA WEB3" subtitle="Deployed. Trusted. Proven.">
       <div className="border-x border-t">
         {/* Statistics Section */}
         <div
@@ -93,11 +93,11 @@ export function GrowthSection() {
 
         {/* Decorative borders */}
         <div className="relative">
-          <div className="absolute top-0 -left-4 md:-left-14 h-full w-4 md:w-14 text-gray-950/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
-          <div className="absolute top-0 -right-4 md:-right-14 h-full w-4 md:w-14 text-gray-950/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
+          {/* <div className="absolute top-0 -left-4 md:-left-14 h-full w-4 md:w-14 text-gray-950/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div>
+          <div className="absolute top-0 -right-4 md:-right-14 h-full w-4 md:w-14 text-gray-950/5 bg-[size:10px_10px] [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)]"></div> */}
 
           {/* 3D Cards Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0">
             {projectCards.map((project) => (
               <div
                 key={project.id}
@@ -111,12 +111,12 @@ export function GrowthSection() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* 3D Marquee Demo */}
-          <div className="border-t">
+          {/* <div className="border-t">
             <ThreeDMarqueeDemo />
-          </div>
+          </div> */}
         </div>
       </div>
     </Section>

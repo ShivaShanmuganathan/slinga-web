@@ -1,8 +1,6 @@
 import Navbar from "@/components/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/config";
 import { cn, constructMetadata } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
@@ -17,7 +15,6 @@ export const metadata: Metadata = constructMetadata({
 export const viewport: Viewport = {
   colorScheme: "dark",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 };
@@ -32,24 +29,18 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={`${GeistSans.variable} ${GeistMono.variable}`}
+      data-theme="dark"
     >
       <body
         className={cn(
           "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth font-sans"
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-        >
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
-          <ThemeToggle />
-          <TailwindIndicator />
-        </ThemeProvider>
+        <TooltipProvider delayDuration={0}>
+          {children}
+          <Navbar />
+        </TooltipProvider>
+        <TailwindIndicator />
       </body>
     </html>
   );
