@@ -9,7 +9,7 @@ import CaseStudies from '@/components/sections/CaseStudies';
 import HowItWorks from '@/components/sections/HowItWorks';
 import { Footer } from '@/components/sections/footer';
 import { GrowthSection } from '@/components/sections/growth-section';
-
+import DockDemo from '@/components/ui/dock/dock-demo';
 
 export default function Home() {
   return (
@@ -24,6 +24,7 @@ export default function Home() {
       <HowItWorks />
       <Calendar />
       <Footer />
+      <DockDemo />
     </main>
   );
 }
