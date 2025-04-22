@@ -75,6 +75,8 @@ const config = {
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			'marquee-reverse': 'marquee-reverse 60s linear infinite',
+  			'marquee-slow': 'marquee 120s linear infinite',
+  			'marquee-reverse-slow': 'marquee-reverse 120s linear infinite',
   		},
   		keyframes: {
   			marquee: {
@@ -145,8 +147,13 @@ const config = {
   			'grid-3': 'linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px)',
   			'grid-4': 'linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px)',
   			'grid-5': 'linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px)',
-  			'grid-6': 'linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px)'
-  		}
+  			'grid-6': 'linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px)',
+  			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+  			'gradient-case-study': 'linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.3))',
+  		},
+  		boxShadow: {
+  			'case-study': '0 0 0 1px rgba(255,255,255,0.05), 0 4px 20px rgba(0,0,0,0.1)',
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
