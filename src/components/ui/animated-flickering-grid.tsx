@@ -1,26 +1,52 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import FlickeringGrid from './flickering-grid';
+import React from "react";
+import { motion } from "framer-motion";
+import FlickeringGrid from "./flickering-grid";
+import { cn } from "@/lib/utils";
 
 interface AnimatedFlickeringGridProps {
   className?: string;
+  squareSize?: number;
+  gridGap?: number;
+  flickerChance?: number;
+  color?: string;
+  maxOpacity?: number;
+  text?: string;
+  fontSize?: number;
+  fontWeight?: number;
 }
 
-export default function AnimatedFlickeringGrid({ className }: AnimatedFlickeringGridProps) {
+export const AnimatedFlickeringGrid: React.FC<AnimatedFlickeringGridProps> = ({
+  className,
+  squareSize,
+  gridGap,
+  flickerChance,
+  color,
+  maxOpacity,
+  text,
+  fontSize,
+  fontWeight,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      className={className}
+      transition={{ duration: 0.5 }}
+      className={cn("relative h-full w-full", className)}
     >
       <FlickeringGrid
-        className="size-full"
-        gridGap={4}
-        squareSize={2}
-        maxOpacity={0.5}
+        squareSize={squareSize}
+        gridGap={gridGap}
+        flickerChance={flickerChance}
+        color={color}
+        maxOpacity={maxOpacity}
+        text={text}
+        fontSize={fontSize}
+        fontWeight={fontWeight}
       />
     </motion.div>
   );
-} 
+};
+
+export default FlickeringGrid; 
