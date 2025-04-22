@@ -48,7 +48,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isActive, set
           }`}
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="black"
         >
           <path
             strokeLinecap="round"

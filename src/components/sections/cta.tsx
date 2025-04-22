@@ -179,7 +179,7 @@ export function CTA() {
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Book A Call With SHIVA
+                Book A Call
                 <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
               </button>
             </div>
