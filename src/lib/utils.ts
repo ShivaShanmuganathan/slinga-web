@@ -29,7 +29,7 @@ export function constructMetadata({
       default: siteConfig.name,
     },
     description: description || siteConfig.description,
-    keywords: siteConfig.keywords,
+    keywords: [...siteConfig.keywords],
     openGraph: {
       title,
       description,
