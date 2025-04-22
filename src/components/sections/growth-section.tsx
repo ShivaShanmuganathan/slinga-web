@@ -44,7 +44,7 @@ const projectCards = [
 
 export function GrowthSection() {
   return (
-    <Section title="PREVIOUS PROJECTS" subtitle="Deployed. Trusted. Proven.">
+    <Section title="SHIVA WEB3" subtitle="Deployed. Trusted. Proven.">
       <div className="border-x border-t">
         {/* Statistics Section */}
         <div

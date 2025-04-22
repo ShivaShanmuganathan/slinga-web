@@ -74,10 +74,10 @@ const StickyScrollLayout: React.FC = () => {
           <div className="sticky top-0 h-[100vh] flex items-center px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-medium sm:text-3xl md:text-4xl lg:text-5xl">
-                All your marketing needs handled
+              Designed for clarity.  
               </h2>
               <p className="mt-2 sm:mt-4 text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
-                In record time.
+              Engineered for audits.
               </p>
             </div>
           </div>

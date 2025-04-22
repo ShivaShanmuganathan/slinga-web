@@ -13,7 +13,7 @@ const HowItWorks: React.FC = () => {
         {/* Section Header */}
         <div className="mb-24 text-center">
           <h2 className="text-6xl font-bold text-white sm:text-7xl md:text-8xl">
-            Supafast, supaeasy
+          From idea to mainnet
           </h2>
         </div>
 
@@ -21,18 +21,18 @@ const HowItWorks: React.FC = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-3">
             <HowItWorksCard
-              title="Subscribe or Request"
-              description="Subscription: For ongoing design. One-Off Project: Perfect for a single high-impact deliverable"
-              icon="lightning"
+              title="Know Your Vision"
+              description="Whether it's a DeFi protocol, an NFT game, or something completely new, share your vision. We'll align on scope, priorities, and what success looks like."
+              icon="lightning"     
             />
             <HowItWorksCard
-              title="48-Hour Updates"
-              description="We move at lightning speed. We provide drafts, revisions, or final assets, usually within 48 hours."
+              title="Build the Core Contracts"
+              description="From architecture to deployment, I handle every part of the smart contract lifecycle — following best practices in gas optimization, upgradability, and security."
               icon="clock"
             />
             <HowItWorksCard
-              title="Approval & Repeat"
-              description="We complete each project to your satisfaction. Approve and move on, or stack tasks for constant growth."
+              title="Test. Ship. Support."
+              description="Your contracts are rigorously tested, audited-ready, and shipped to mainnet. I support integrations, upgrades, and documentation so you're launch-ready."
               icon="tasks"
             />
           </div>
