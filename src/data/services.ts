@@ -35,6 +35,6 @@ export const services: Service[] = [
   },
   {
     id: '8',
-    title: 'ZK & L2 Deployment',
+    title: 'Deployment',
   },
 ]; 

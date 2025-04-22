@@ -174,8 +174,12 @@ export function CTA() {
                   }),
                   "group mt-6 rounded-[2rem] px-8",
                 )}
+                onClick={() => {
+                  const element = document.getElementById('calendar');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
-                Get Started
+                Book A Call With SHIVA
                 <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
               </button>
             </div>
