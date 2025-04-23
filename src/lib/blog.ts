@@ -12,9 +12,8 @@ export type Post = {
   title: string;
   publishedAt: string;
   summary: string;
-  author: string;
   slug: string;
-  image?: string;
+  image: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -91,6 +90,50 @@ async function getAllPosts(dir: string) {
   );
 }
 
-export async function getBlogPosts() {
-  return getAllPosts(path.join(process.cwd(), "content"));
+export async function getBlogPosts(): Promise<Post[]> {
+  // Hardcoded blog posts data since we're using React components
+  return [
+    {
+      title: "Crypto Unicorn Assets",
+      publishedAt: "2024-03-23",
+      summary: "A comprehensive look into the onchain assets powering the Crypto Unicorns ecosystem — from NFTs to tokens and loot systems.",
+      slug: "cu-assets",
+      image: "/cu.jpg"
+    },
+    {
+      title: "Twilight Tactics & Shadowforge",
+      publishedAt: "2024-03-23",
+      summary: "A deep dive into Crypto Unicorns' seasonal PvP system, Twilight Tactics, and the mechanics behind Shadowforge-driven minion warfare.",
+      slug: "cu-twilight",
+      image: "/cu-twilight-tactics.webp"
+    },
+    {
+      title: "Crypto Unicorns: Expanding the Universe with Casual & 2nd Party Games",
+      publishedAt: "2024-03-20",
+      summary: "Exploring how Crypto Unicorns created an inclusive gaming ecosystem through casual games and second-party integrations.",
+      slug: "cu-2p-loop",
+      image: "/cu-2p-games.jpeg"
+    },
+    {
+      title: "Crypto Unicorns: The Evolution of Skill-Based Gaming",
+      publishedAt: "2024-03-20",
+      summary: "Exploring how Crypto Unicorns revolutionized blockchain gaming with its skill-based competitive modes and PvP systems.",
+      slug: "cu-battle-loop",
+      image: "/cu-battle-loop.avif"
+    },
+    {
+      title: "Crypto Unicorns: The Revolutionary Farm Economy",
+      publishedAt: "2024-03-20",
+      summary: "A deep dive into how Crypto Unicorns built a sustainable and engaging farm economy that drives the entire game ecosystem.",
+      slug: "cu-farm-loop",
+      image: "/cu-farm-loop.webp"
+    },
+    {
+      title: "Crypto Unicorns: Trading & Distribution Systems",
+      publishedAt: "2024-03-20",
+      summary: "A technical deep dive into Crypto Unicorns' innovative marketplace and AMM-powered land distribution systems.",
+      slug: "cu-trading-systems",
+      image: "/cu-trading.png"
+    }
+  ];
 }

@@ -13,20 +13,19 @@ export default function BlogCard({
   return (
     <Link
       href={`/blog/${data.slug}`}
-      className="bg-background transition-colors hover:bg-secondary/20 p-4 border-b lg:border-b lg:last:border-b-0 lg:border-r last:lg:border-r-0"
+      className="group relative bg-background transition-colors hover:bg-secondary/20 p-6 border-b lg:border-b lg:last:border-b-0 lg:border-r last:lg:border-r-0"
     >
-      {data.image && (
+      <div className="aspect-[16/9] relative mb-6 overflow-hidden rounded-lg border">
         <Image
-          className="object-cover border"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           src={data.image}
-          width={1200}
-          height={630}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={data.title}
           priority={priority}
         />
-      )}
-      {!data.image && <div className="bg-gray-200 h-[180px] mb-4 rounded" />}
-      <p className="my-2">
+      </div>
+      <p className="mb-2">
         <time
           dateTime={data.publishedAt}
           className="text-xs text-muted-foreground"
@@ -34,8 +33,8 @@ export default function BlogCard({
           {formatDate(data.publishedAt)}
         </time>
       </p>
-      <h3 className="text-xl font-medium mb-2">{data.title}</h3>
-      <p className="text-muted-foreground">{data.summary}</p>
+      <h3 className="text-xl font-medium mb-3 line-clamp-2">{data.title}</h3>
+      <p className="text-muted-foreground line-clamp-3">{data.summary}</p>
     </Link>
   );
 }
