@@ -24,8 +24,8 @@
 	  })();
 	}, [])
 	return (
-	  <Section id="calendar" title="SHIVA WEB3" subtitle="Book a Call">
-		<div className="border-x border-t">
+	  <Section id="calendar" title="SHIVA WEB3" subtitle="Book a Call" className="w-full max-w-[2000px] mx-auto">
+		<div className="border-x border-t w-full">
 			<div className="w-full bg-black">
 					<Cal 
 					namespace="30min"
@@ -36,7 +36,8 @@
 					minHeight: "600px",
 					background: "rgb(15, 15, 15)",
 					borderRadius: "8px",
-					colorScheme: "dark"
+					colorScheme: "dark",
+					margin: "0 auto"
 					}}
 					config={{
 					layout: "month_view",
