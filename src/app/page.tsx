@@ -1,6 +1,7 @@
 import { CTA } from "@/components/sections/cta";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
+import HeroSection from "@/components/sections/herosection";
 import Logos from "@/components/sections/logos";
 import Calendar from "@/components/sections/calendar";
 import MarqueeGallery from '@/components/MarqueeGallery';
@@ -15,7 +16,8 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
+      <HeroSection />
       <Logos />
       <GrowthSection />
       <MarqueeGallery />

@@ -3,6 +3,8 @@
 import React from 'react';
 import HowItWorksCard from '@/components/HowItWorksCard';
 
+
+
 const HowItWorks: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-black">
@@ -20,6 +22,7 @@ const HowItWorks: React.FC = () => {
         {/* Cards Container */}
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-3">
+
             <HowItWorksCard
               title="Know Your Vision"
               description="Whether it's a DeFi protocol, an NFT game, or something completely new, share your vision. We'll align on scope, priorities, and what success looks like."
