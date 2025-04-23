@@ -71,6 +71,29 @@ export default function Navbar() {
                 </Tooltip>
               </DockIcon>
             ))}
+            <Separator orientation="vertical" className="h-full" />
+            {DATA.cal.map((item) => (
+            <DockIcon key={item.href}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "text-purple-500 hover:text-purple-600",
+                      "size-12"
+                    )}
+                  >
+                    <item.icon className="size-4" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{item.label}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
+          
         </Dock>
       </div>
     </TooltipProvider>

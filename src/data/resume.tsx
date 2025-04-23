@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import navbar from "@/components/navbar";
+import { CalendarIcon, HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Shiva Shanmuganathan",
@@ -29,6 +30,9 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
+  cal: [
+    { href: "#calendar", icon: CalendarIcon, label: "Calendar" },
+  ],
   contact: {
     email: "shanshiva@outlook.com",
     tel: "+91 6379928505",
@@ -39,36 +43,30 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/shiva-shanmuganathan/",
-        icon: Icons.linkedin,
-        navbar: true,
-      },
+      // LinkedIn: {
+      //   name: "LinkedIn",
+      //   url: "https://www.linkedin.com/in/shiva-shanmuganathan/",
+      //   icon: Icons.linkedin,
+      //   navbar: true,
+      // },
       X: {
         name: "X",
         url: "https://x.com/shanshiva1",
         icon: Icons.x,
         navbar: true,
       },
-      Telegram: {
-        name: "Telegram",
-        url: "https://t.me/@shanshiva4",
-        icon: Icons.telegram,
-        navbar: true,
-      },
-      Discord: {
-        name: "Discord",
-        url: "https://discord.com/invite/shanshiva4",
-        icon: Icons.discord,
-        navbar: true,
-      },
-      Calendar: {
-        name: "Calendar",
-        url: "#calendar",
-        icon: Icons.calendar,
-        navbar: true,
-      },
+      // Telegram: {
+      //   name: "Telegram",
+      //   url: "https://t.me/@shanshiva4",
+      //   icon: Icons.telegram,
+      //   navbar: true,
+      // },
+      // Discord: {
+      //   name: "Discord",
+      //   url: "https://discord.com/invite/shanshiva4",
+      //   icon: Icons.discord,
+      //   navbar: true,
+      // },
     },
   },
   work: [
