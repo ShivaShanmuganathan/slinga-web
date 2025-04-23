@@ -22,7 +22,7 @@ const HowItWorks: React.FC = () => {
           <div className="grid gap-8 md:grid-cols-3">
             <HowItWorksCard
               title="Know Your Vision"
-              description="Whether it's a DeFi protocol, an NFT game, or something completely new, share your vision. We'll align on scope, priorities, and what success looks like."
+              description="Whether it's a DeFi protocol, an NFT game, or something completely new, share your vision. I will work with you to align on scope, priorities, and what success looks like."
               icon="lightning"     
             />
             <HowItWorksCard

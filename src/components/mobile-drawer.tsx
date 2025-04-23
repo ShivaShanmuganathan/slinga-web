@@ -1,3 +1,5 @@
+"use client";
+
 import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -13,8 +15,16 @@ import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { IoMenuSharp } from "react-icons/io5";
+import { useKeyboardShortcut } from "@/hooks/use-keyboard-shortcut";
 
 export function MobileDrawer() {
+  const scrollToCalendar = () => {
+    const element = document.getElementById('calendar');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useKeyboardShortcut('b', scrollToCalendar);
+
   return (
     <Drawer>
       <DrawerTrigger>
@@ -33,15 +43,15 @@ export function MobileDrawer() {
           <DrawerDescription>{siteConfig.description}</DrawerDescription>
         </DrawerHeader>
         <DrawerFooter>
-          <Link
-            href="#"
+          <button
+            onClick={scrollToCalendar}
             className={cn(
               buttonVariants({ variant: "default" }),
               "text-white rounded-full group"
             )}
           >
             {siteConfig.cta}
-          </Link>
+          </button>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

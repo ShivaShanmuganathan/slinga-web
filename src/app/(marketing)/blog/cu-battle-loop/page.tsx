@@ -2,6 +2,7 @@ import { Section } from "@/components/section";
 import Blog from "@/components/sections/blog";
 import Image from "next/image";
 import { Suspense } from "react";
+import { Github } from "lucide-react";
 
 export default function CUBattleLoop() {
   return (
@@ -41,13 +42,13 @@ export default function CUBattleLoop() {
                 <p className="mt-6">
                   The battle loop is powered by the below diamond standard smart contracts:
                 </p>
-                <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-shadowforge" className="text-primary hover:underline">Shadowforge</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Crypto Unicorns</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-items" className="text-primary hover:underline">Shadowcorn Items</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-rituals" className="text-primary hover:underline">Rituals</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-dark-marks" className="text-primary hover:underline">Dark Marks Token</a></li>
+                <ul className="mt-4 space-y-2 list-none pl-6">
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowforge" className="text-primary hover:underline">Shadowforge</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Crypto Unicorns</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-items" className="text-primary hover:underline">Shadowcorn Items</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-rituals" className="text-primary hover:underline">Rituals</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-dark-marks" className="text-primary hover:underline">Dark Marks Token</a></li>
                 </ul>
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Game Modes Breakdown</h2>

@@ -14,6 +14,14 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export default function Navbar() {
+  const handleCalendarClick = (e: React.MouseEvent, href: string) => {
+    if (href === "#calendar") {
+      e.preventDefault();
+      const element = document.getElementById('calendar');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <TooltipProvider>
       <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
@@ -48,6 +56,7 @@ export default function Navbar() {
                   <TooltipTrigger asChild>
                     <Link
                       href={social.url}
+                      onClick={(e) => handleCalendarClick(e, social.url)}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
                         "size-12"

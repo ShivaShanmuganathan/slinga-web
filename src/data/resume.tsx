@@ -65,7 +65,7 @@ export const DATA = {
       },
       Calendar: {
         name: "Calendar",
-        url: "/#calendar",
+        url: "#calendar",
         icon: Icons.calendar,
         navbar: true,
       },
