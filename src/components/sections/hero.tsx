@@ -1,178 +1,171 @@
 "use client";
 
 import { AuroraText } from "@/components/aurora-text";
-import { Icons } from "@/components/icons";
 import { Section } from "@/components/section";
-import { buttonVariants } from "@/components/ui/button";
+import { DotPattern } from "@/components/ui/dot-pattern";
+import { MobileAnimation } from "@/components/ui/mobile-animation";
+import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { ShieldCheck, Calendar } from "lucide-react";
 import { lazy, Suspense, useEffect, useState } from "react";
+
+const LazySpline = lazy(() => import("@splinetool/react-spline"));
 
 const ease = [0.16, 1, 0.3, 1];
 
-function HeroPill() {
+function SecurityPill() {
   return (
-    <motion.a
-      href="/blog/introducing-dev-ai"
-      className="flex w-auto items-center space-x-2 rounded-full bg-primary/20 px-2 py-1 ring-1 ring-accent whitespace-pre"
+    <motion.div
+      className="flex w-fit items-center space-x-2 rounded-full bg-primary/10 px-3 py-1.5 ring-1 ring-primary/25"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease }}
     >
-      <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-left text-xs font-medium text-primary sm:text-sm">
-        🛡️ Security First Approach
+      <div className="flex items-center gap-2 text-sm font-medium text-primary">
+        <ShieldCheck className="h-4 w-4" />
+        Security First Approach
       </div>
-      <p className="text-xs font-medium text-primary sm:text-sm">
-      {/* For a Living */}
-      </p>
-      <svg
-        width="12"
-        height="12"
-        className="ml-1"
-        viewBox="0 0 12 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.78141 5.33312L5.20541 1.75712L6.14808 0.814453L11.3334 5.99979L6.14808 11.1851L5.20541 10.2425L8.78141 6.66645H0.666748V5.33312H8.78141Z"
-          fill="hsl(var(--primary))"
-        />
-      </svg>
-    </motion.a>
+    </motion.div>
   );
 }
-
-function HeroTitles() {
-  return (
-    <div className="flex w-full max-w-3xl flex-col overflow-hidden pt-8">
-      <motion.h1
-        className="text-left text-4xl font-semibold leading-tighter text-foreground sm:text-5xl md:text-6xl tracking-tighter"
-        initial={{ filter: "blur(10px)", opacity: 0, y: 50 }}
-        animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-        transition={{
-          duration: 1,
-          ease,
-          staggerChildren: 0.2,
-        }}
-      >
-        <motion.span
-          className="inline-block text-balance"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease,
-          }}
-        >
-          <AuroraText className="leading-normal">
-            {siteConfig.hero.title}
-          </AuroraText>
-        </motion.span>
-      </motion.h1>
-      <motion.p
-        className="text-left max-w-xl leading-normal text-muted-foreground sm:text-lg sm:leading-normal text-balance"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.6,
-          duration: 0.8,
-          ease,
-        }}
-      >
-        {siteConfig.hero.description}
-      </motion.p>
-    </div>
-  );
-}
-
-function HeroCTA() {
-  return (
-    <div className="relative mt-6">
-      <motion.div
-        className="flex w-full max-w-2xl flex-col items-start justify-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.8, ease }}
-      >
-        <Link
-          href="#calendar"
-          className={cn(
-            buttonVariants({ variant: "default" }),
-            "w-full sm:w-auto text-background flex gap-2 rounded-lg"
-          )}
-        >
-          <Icons.logo className="h-6 w-6" />
-          {siteConfig.hero.cta}
-        </Link>
-      </motion.div>
-      <motion.p
-        className="mt-3 text-sm text-muted-foreground text-left"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.0, duration: 0.8 }}
-      >
-        {siteConfig.hero.ctaDescription}
-      </motion.p>
-    </div>
-  );
-}
-const LazySpline = lazy(() => import("@splinetool/react-spline"));
 
 export function Hero() {
   const [showSpline, setShowSpline] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024); // Assuming 1024px is the breakpoint for lg
+      setIsMobile(window.innerWidth < 1024);
     };
 
     checkMobile();
     window.addEventListener("resize", checkMobile);
-
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
-    // Don't show on mobile
     if (!isMobile) {
       const timer = setTimeout(() => {
         setShowSpline(true);
       }, 1000);
-
       return () => clearTimeout(timer);
     }
   }, [isMobile]);
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { left, top } = e.currentTarget.getBoundingClientRect();
+    mouseX.set(e.clientX - left);
+    mouseY.set(e.clientY - top);
+  };
+
   return (
-    <Section id="hero">
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-full p-6 lg:p-12 border-x overflow-hidden">
-        <div className="flex flex-col justify-start items-start lg:col-span-1">
-          <HeroPill />
-          <HeroTitles />
-          <HeroCTA />
-        </div>
-        {!isMobile && (
-          <div className="relative lg:h-full lg:col-span-1">
-            <Suspense>
-              {showSpline && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 1 }}
-                >
-                  <LazySpline
-                    scene="https://prod.spline.design/mZBrYNcnoESGlTUG/scene.splinecode"
-                    className="absolute inset-0 w-full h-full origin-top-left flex items-center justify-center"
-                  />
-                </motion.div>
-              )}
-            </Suspense>
+    <Section id="hero" className="overflow-hidden">
+      <div
+        className="relative h-screen w-full bg-orange-50 dark:bg-black group"
+        onMouseMove={handleMouseMove}
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+        <DotPattern
+          className="[mask-image:radial-gradient(circle_at_center,black,transparent)] fill-neutral-400"
+          width={16}
+          height={16}
+          cx={1}
+          cy={1}
+          cr={1}
+        />
+        <motion.div
+          className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
+          style={{
+            WebkitMaskImage: useMotionTemplate`
+              radial-gradient(
+                250px circle at ${mouseX}px ${mouseY}px,
+                black 0%,
+                transparent 100%
+              )
+            `,
+            maskImage: useMotionTemplate`
+              radial-gradient(
+                250px circle at ${mouseX}px ${mouseY}px,
+                black 0%,
+                transparent 100%
+              )
+            `,
+          }}
+        >
+          <DotPattern
+            width={16}
+            height={16}
+            cx={1}
+            cy={1}
+            cr={1}
+            className="fill-orange-500 dark:fill-orange-500"
+          />
+        </motion.div>
+
+        <div className="container relative grid h-screen grid-cols-1 items-center gap-8 lg:grid-cols-2">
+          <div className="flex flex-col items-start space-y-8">
+            <SecurityPill />
+
+            <motion.div
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease }}
+            >
+              <h1 className="text-4xl font-bold leading-tight tracking-tighter md:text-6xl lg:text-7xl">
+                <AuroraText>{siteConfig.hero.title}</AuroraText>
+              </h1>
+              <p className="max-w-[600px] text-lg text-muted-foreground sm:text-xl">
+                {siteConfig.hero.description}
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease }}
+            >
+              <Button size="lg" className="group relative overflow-hidden">
+                <Calendar className="mr-2 h-4 w-4" />
+                Book A Call
+                <span className="absolute inset-x-0 -bottom-0 h-px w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 ease-out group-hover:translate-y-0.5" />
+              </Button>
+            </motion.div>
           </div>
-        )}
+
+          <div className="relative h-full">
+            {isMobile ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.4, ease }}
+                className="flex h-full items-center justify-center"
+              >
+                <MobileAnimation />
+              </motion.div>
+            ) : (
+              <Suspense>
+                {showSpline && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.8, ease }}
+                    className="absolute inset-0 scale-150 translate-x-24"
+                  >
+                    <LazySpline
+                      scene="https://prod.spline.design/mZBrYNcnoESGlTUG/scene.splinecode"
+                      className="h-full w-full [&>div>div:last-child]:hidden"
+                    />
+                  </motion.div>
+                )}
+              </Suspense>
+            )}
+          </div>
+        </div>
       </div>
     </Section>
   );
