@@ -77,6 +77,7 @@ const config = {
   			'marquee-reverse': 'marquee-reverse 60s linear infinite',
   			'marquee-slow': 'marquee 120s linear infinite',
   			'marquee-reverse-slow': 'marquee-reverse 120s linear infinite',
+  			'shine': 'shine var(--duration,14s) infinite linear',
   		},
   		keyframes: {
   			marquee: {
@@ -132,6 +133,11 @@ const config = {
   				'0%': { transform: 'translateX(calc(-25% - var(--gap)))' },
   				'100%': { transform: 'translateX(0)' }
   			},
+  			'shine': {
+  				'0%': { backgroundPosition: '0% 0%' },
+  				'50%': { backgroundPosition: '100% 100%' },
+  				'100%': { backgroundPosition: '0% 0%' }
+  			}
   		},
   		backgroundSize: {
   			'grid-1': '100% 100%',

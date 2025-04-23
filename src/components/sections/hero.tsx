@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { lazy, Suspense, useEffect, useState } from "react";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -150,13 +151,21 @@ export function Hero() {
   return (
     <Section id="hero">
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-full p-6 lg:p-12 border-x overflow-hidden">
-        <div className="flex flex-col justify-start items-start lg:col-span-1">
+        <DotPattern 
+          className="[mask-image:radial-gradient(circle_at_center,black,transparent_80%)]"
+          width={32}
+          height={32}
+          cx={2}
+          cy={2}
+          cr={1}
+        />
+        <div className="flex flex-col justify-start items-start lg:col-span-1 relative z-10">
           <HeroPill />
           <HeroTitles />
           <HeroCTA />
         </div>
         {!isMobile && (
-          <div className="relative lg:h-full lg:col-span-1">
+          <div className="relative lg:h-full lg:col-span-1 z-10">
             <Suspense>
               {showSpline && (
                 <motion.div

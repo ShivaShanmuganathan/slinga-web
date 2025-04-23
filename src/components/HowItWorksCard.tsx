@@ -4,6 +4,7 @@ import React from 'react';
 import { FaLightbulb } from "react-icons/fa";
 import { BsCodeSlash } from "react-icons/bs";
 import { TbTestPipe } from "react-icons/tb";
+import { ShineBorder } from './magicui/shine-border';
 
 interface HowItWorksCardProps {
   title: string;
@@ -50,6 +51,7 @@ const HowItWorksCard: React.FC<HowItWorksCardProps> = ({
 
   return (
     <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#0A0A0A] p-8 shadow-lg">
+      <ShineBorder shineColor={["#000000", "#000000", "#FFFFFF"]} />
       {/* Content */}
       <div className="mb-8 flex justify-center">{getIcon()}</div>
       <h3 className="mb-4 text-2xl font-semibold text-white text-center">{title}</h3>
