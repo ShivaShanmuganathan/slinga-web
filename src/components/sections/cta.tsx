@@ -162,6 +162,7 @@ export function CTA() {
             <div className="z-10 mt-8 flex flex-col items-center text-center text-primary">
               <h1 className="text-3xl font-bold lg:text-4xl">
                 Start your dev work with Slinga
+                Bring your ideas. I’ll bring the contracts.
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
                 Contact

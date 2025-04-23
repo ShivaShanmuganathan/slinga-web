@@ -15,8 +15,8 @@ import { type } from "os";
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
-  name: "Shiva Shanmuganathan",
-  cta: "Book A Call With SHIVA",
+  name: "SHIVA SHANMUGANATHAN",
+  cta: "Press 🅱️ to book a call",
   description:
     "Smart Contract Engineer specializing in Web3 and blockchain technology. Building secure and scalable decentralized applications.",
   url: "https://slinga.xyz",
@@ -35,10 +35,9 @@ export const siteConfig = {
     instagram: "https://instagram.com/aiagentsdk",
   },
   hero: {
-    title: "SHIVA",
+    title: "Production Grade Smart Contracts",
     description:
-      "Smart contract engineer specialized in secure, scalable, modular smart contract systems. \n With three years of industry experience, I turn blockchain ideas into powerful, production-ready dApps.",
-
+      "In 3+ years of protocol engineering, I’ve shipped contracts that power onchain games, DeFi, staking systems, and token economies.",
     cta: "Get in Touch",
     ctaDescription: "Secure smart contracts. Delivered fast.",
   },

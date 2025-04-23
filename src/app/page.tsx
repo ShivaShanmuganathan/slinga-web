@@ -1,4 +1,3 @@
-import { CTA } from "@/components/sections/cta";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import Logos from "@/components/sections/logos";
@@ -9,7 +8,6 @@ import CaseStudies from '@/components/sections/CaseStudies';
 import HowItWorks from '@/components/sections/HowItWorks';
 import { Footer } from '@/components/sections/footer';
 import { GrowthSection } from '@/components/sections/growth-section';
-
 
 export default function Home() {
   return (

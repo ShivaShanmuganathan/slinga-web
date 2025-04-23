@@ -1,5 +1,5 @@
 import Author from "@/components/blog-author";
-import { CTA } from "@/components/sections/cta";
+import Calendar from "@/components/sections/calendar";
 import { getPost } from "@/lib/blog";
 import { siteConfig } from "@/lib/config";
 import { formatDate } from "@/lib/utils";
@@ -113,7 +113,7 @@ export default async function Page(props: {
           <Author
             twitterUsername={post.metadata.author}
             name={post.metadata.author}
-            image={"/author.jpg"}
+            image={"/shiva-pfp.jpeg"}
           />
         </div>
         <article
@@ -121,7 +121,7 @@ export default async function Page(props: {
           dangerouslySetInnerHTML={{ __html: post.source }}
         ></article>
       </div>
-      <CTA />
+      <Calendar />
     </section>
   );
 }

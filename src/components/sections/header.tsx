@@ -20,7 +20,7 @@ export function Header() {
         </Link>
         <div className="hidden lg:block">
           <Link
-            href="#calendar"
+            href="/#calendar"
           >
             <RainbowButton>
               {siteConfig.cta}

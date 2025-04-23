@@ -51,10 +51,22 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
-      email: {
-        name: "Send Email",
-        url: "mailto:shanshiva@outlook.com",
-        icon: Icons.email,
+      Telegram: {
+        name: "Telegram",
+        url: "https://t.me/@shanshiva4",
+        icon: Icons.telegram,
+        navbar: true,
+      },
+      Discord: {
+        name: "Discord",
+        url: "https://discord.com/invite/shanshiva4",
+        icon: Icons.discord,
+        navbar: true,
+      },
+      Calendar: {
+        name: "Calendar",
+        url: "/#calendar",
+        icon: Icons.calendar,
         navbar: true,
       },
     },

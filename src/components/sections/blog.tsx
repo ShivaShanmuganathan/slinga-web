@@ -1,6 +1,7 @@
 import BlogCard from "@/components/blog-card";
 import { Section } from "@/components/section";
 import { getBlogPosts } from "@/lib/blog";
+import Calendar from "@/components/sections/calendar";
 
 export default async function Blog() {
   const allPosts = await getBlogPosts();
@@ -10,12 +11,15 @@ export default async function Blog() {
   );
 
   return (
-    <Section id="blog" title="Blog">
-      <div className="grid grid-cols-1 lg:grid-cols-3 border border-b-1">
-        {articles.map((data, idx) => (
-          <BlogCard key={data.slug} data={data} priority={idx <= 1} />
-        ))}
-      </div>
-    </Section>
+    <>
+      <Section id="blog" title="Blog">
+        <div className="grid grid-cols-1 lg:grid-cols-3 border border-b-1">
+          {articles.map((data, idx) => (
+            <BlogCard key={data.slug} data={data} priority={idx <= 1} />
+          ))}
+        </div>
+      </Section>
+      <Calendar />
+    </>
   );
 }
