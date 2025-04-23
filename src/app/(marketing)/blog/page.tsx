@@ -2,6 +2,9 @@ import BlogCard from "@/components/blog-card";
 import { getBlogPosts } from "@/lib/blog";
 import { siteConfig } from "@/lib/config";
 import { constructMetadata } from "@/lib/utils";
+import { Section } from "@/components/section";
+import Calendar from "@/components/sections/calendar";
+import CaseStudies from "@/components/sections/CaseStudies";
 
 export const metadata = constructMetadata({
   title: "Blog",
@@ -17,28 +20,19 @@ export default async function Blog() {
 
   return (
     <>
-      <div className="mx-auto w-full max-w-screen-xl px-2.5 lg:px-20 mt-2">
-        <div className="text-center py-16">
-          <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Projects & Articles
-          </h1>
-          <p className="mt-4 text-xl text-muted-foreground">
-            Detailed blogs on projects.
-          </p>
-        </div>
-      </div>
-      
-      <div className="min-h-[50vh] border-b shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur-lg"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle at bottom center, hsl(var(--secondary) / 0.4), hsl(var(--background)))",
-      }}>
+
+    <Section id="blog" title="BLOG" subtitle="Projects Explained" className="w-full max-w-[2000px] mx-auto">
+      <div className="min-h-[50vh] border-b  bg-black">
         <div className="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-8 px-2.5 py-10 lg:px-20 lg:grid-cols-3">
           {articles.map((data, idx) => (
             <BlogCard key={data.slug} data={data} priority={idx <= 1} />
           ))}
         </div>
       </div>
+    </Section>
+
+    <CaseStudies />
+    <Calendar />
     </>
   );
 }
