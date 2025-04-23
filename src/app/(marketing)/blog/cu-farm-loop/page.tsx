@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import Blog from "@/components/sections/blog";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -11,7 +12,7 @@ export default function CUFarmLoop() {
         <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
-              <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
+              <p className="text-base font-semibold leading-7 text-primary">Blog</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 Crypto Unicorns: The Revolutionary Farm Economy
               </h1>
@@ -32,25 +33,27 @@ export default function CUFarmLoop() {
 
               {/* Article Content */}
               <div className="mt-10 max-w-2xl">
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">🚜 The Farm Economy</h2>
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">The Farm Economy</h2>
                 <p className="mt-6">
                   Crypto Unicorn&apos;s farm economy serves as the foundation of its entire ecosystem, creating a perfect balance between casual gameplay and economic incentives.
                 </p>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">💻 Technical Implementation</h2>
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Technical Implementation</h2>
                 <p className="mt-6">
-                  The farm economy is powered by diamond standard smart contracts:
+                  
                 </p>
-                <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Crypto Unicorns</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-land" className="text-primary hover:underline">Land</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-public" className="text-primary hover:underline">CU Token</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-unim" className="text-primary hover:underline">UNIM Token</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns</a></li>
-                  <li><a href="https://github.com/Laguna-Games/cu-osc-game-bank" className="text-primary hover:underline">Game Bank</a></li>
+                <ul className="mt-4 space-y-2 list-none pl-6">
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Crypto Unicorns</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-land" className="text-primary hover:underline">Land</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-public" className="text-primary hover:underline">CU Token</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unim" className="text-primary hover:underline">UNIM Token</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-game-bank" className="text-primary hover:underline">Game Bank</a></li>
                 </ul>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">🌾 The Farming Mechanics</h2>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">The Farming Mechanics</h2>
                 <p className="mt-6">
                   Crypto Unicorns&apos; farming system is built on three core pillars:
                 </p>
@@ -112,7 +115,9 @@ export default function CUFarmLoop() {
                   <li><strong>Special Crops:</strong> Seasonal and event-specific resources</li>
                 </ul>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">💰 Economic Impact</h2>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Economic Impact</h2>
                 <p className="mt-6">
                   The farm economy has had significant economic implications:
                 </p>
@@ -122,7 +127,9 @@ export default function CUFarmLoop() {
                   <li><strong>90%+ User Retention:</strong> Proving the sustainability of the economic model</li>
                 </ul>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">🤝 Social Play: Tribes & Collaboration</h2>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Social Play: Tribes & Collaboration</h2>
                 <p className="mt-6">
                   Players can form Tribes, pooling materials to complete global goals or unlock tribe-specific crafting and events. 
                   Tribe mechanics enhance cooperation and introduce a new layer of strategy to the farming loop.
@@ -137,7 +144,9 @@ export default function CUFarmLoop() {
                   />
                 </div>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">🧙‍♂️ PvP Integration: Shadowcorn Raids</h2>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">PvP Integration: Shadowcorn Raids</h2>
                 <div className="mt-8">
                   <Image
                     src="/shadowcorns.jpeg"
@@ -151,6 +160,8 @@ export default function CUFarmLoop() {
                   For a darker twist, players who own Shadowcorn NFTs can breed minions and raid Unicorn lands. 
                   This introduces an adversarial layer, tying the farming economy with factional PvP and creating resource pressure and burn mechanisms.
                 </p>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏦 Game Bank: The Economic Core</h2>
                 <p className="mt-6">
@@ -167,6 +178,7 @@ export default function CUFarmLoop() {
                   <li>PvP (Shadowforge)</li>
                   <li>Marketplace</li>
                 </ul>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏁 Conclusion</h2>
                 <p className="mt-6">

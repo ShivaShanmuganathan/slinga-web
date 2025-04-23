@@ -12,7 +12,7 @@ export default function CUBattleLoop() {
         <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
-              <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
+              <p className="text-base font-semibold leading-7 text-primary">Blog</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 Crypto Unicorns: The Evolution of Skill-Based Gaming
               </h1>
@@ -38,7 +38,9 @@ export default function CUBattleLoop() {
                   Blending strategy, skill, and onchain ownership to redefine competitive gaming in Web3.
                 </p>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">💻 Technical Implementation</h2>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Technical Implementation</h2>
                 <p className="mt-6">
                   The battle loop is powered by the below diamond standard smart contracts:
                 </p>
@@ -46,10 +48,12 @@ export default function CUBattleLoop() {
                   <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowforge" className="text-primary hover:underline">Shadowforge</a></li>
                   <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Crypto Unicorns</a></li>
                   <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns</a></li>
-                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-items" className="text-primary hover:underline">Shadowcorn Items</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-items" className="text-primary hover:underline">Unicorn & Shadowcorn Items</a></li>
                   <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-rituals" className="text-primary hover:underline">Rituals</a></li>
                   <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-dark-marks" className="text-primary hover:underline">Dark Marks Token</a></li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Game Modes Breakdown</h2>
 
@@ -133,6 +137,8 @@ export default function CUBattleLoop() {
                   <li>Unique loot and rewards</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Economic Impact</h2>
                 <p className="mt-6">
                   The skill-based games have significantly contributed to the ecosystem:
@@ -142,6 +148,8 @@ export default function CUBattleLoop() {
                   <li><strong>50K Daily Active Players:</strong> At peak activity in competitive modes</li>
                   <li><strong>$100M TVL:</strong> In The Dark Forest: Act One tournament series</li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Player Progression System</h2>
                 <p className="mt-6">
@@ -154,9 +162,11 @@ export default function CUBattleLoop() {
                   <li><strong>Leaderboards:</strong> Global and seasonal rankings</li>
                 </ol>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">🏁 Conclusion</h2>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Conclusion</h2>
                 <p className="mt-6">
-                  Crypto Unicorns&apos; midcore skill-based games represent a significant advancement in blockchain gaming. 
+                  Crypto Unicorns&apos; skill-based games represent a significant advancement in blockchain gaming. 
                   By combining traditional competitive gaming mechanics with blockchain technology, the project has created a sustainable and engaging competitive ecosystem that appeals to both casual and hardcore gamers.
                 </p>
               </div>

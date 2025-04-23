@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import Blog from "@/components/sections/blog";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -11,7 +12,7 @@ export default function CryptoUnicorns() {
         <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
-              <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
+              <p className="text-base font-semibold leading-7 text-primary">Blog</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 Crypto Unicorns: Building a Fully On-Chain Gaming Ecosystem
               </h1>
@@ -39,6 +40,8 @@ export default function CryptoUnicorns() {
                   The game features multiple gameplay modes including farming, crafting, and PvP battles, all powered by
                   blockchain technology.
                 </p>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Key Achievements</h2>
                 <ul role="list" className="mt-8 space-y-8 text-gray-600">
@@ -86,6 +89,8 @@ export default function CryptoUnicorns() {
                   
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Technical Implementation</h2>
                 <p className="mt-6">
                   As the Lead Solidity Engineer on Crypto Unicorns, 
@@ -94,11 +99,18 @@ export default function CryptoUnicorns() {
                   The core of the architecture was built using the Diamond Standard (ERC-2535) to enable upgradable, gas-efficient, and extensible smart contracts.
                 </p>
 
-                {/* Technical Architecture Image */}
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Economic Design</h2>
+                <p className="mt-6">
+                  Crypto Unicorns employed a multi-loop economic system blending core DeFi logic with casual and midcore gameplay.
+                </p>
+
+                {/* Economic Design Image */}
                 <div className="mt-8 max-w-2xl">
                   <Image
-                    src="/cu-tech.jpeg"
-                    alt="Crypto Unicorns Technical Architecture"
+                    src="/cu-game-economy.jpeg"
+                    alt="Crypto Unicorns Economic Design"
                     width={800}
                     height={400}
                     className="rounded-xl"
@@ -204,6 +216,8 @@ export default function CryptoUnicorns() {
                     </div>
                   </details>
                 </div>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">Economic Design</h2>
                 <p className="mt-6">

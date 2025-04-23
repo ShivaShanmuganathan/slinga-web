@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import Blog from "@/components/sections/blog";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -11,7 +12,7 @@ export default function CU2PLoop() {
         <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
-              <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
+              <p className="text-base font-semibold leading-7 text-primary">Blog</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 Crypto Unicorns: Expanding the Universe with Casual & 2nd Party Games
               </h1>
@@ -38,22 +39,32 @@ export default function CU2PLoop() {
                   This approach has helped the project reach a broader audience while maintaining the integrity of its core economy.
                 </p>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Technical Implementation</h2>
+
+                <p className="mt-4">
+                The casual games were built with the Satellite Bank system, which is a modular contract system, built using the Diamond Standard (ERC-2535), designed to support 2nd-party games and applications within the Crypto Unicorns ecosystem.
+                It enables secure, scalable, and customizable in-game economies while maintaining full composability with the core game.
+                </p>
+
+                <ul className="mt-4 space-y-2 list-none pl-6">
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-satbank" className="text-primary hover:underline">Satellite Bank</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-game-bank" className="text-primary hover:underline">Game Bank</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-common-tokens" className="text-primary hover:underline">Common Tokens</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-common" className="text-primary hover:underline">Common Contracts in CU</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-public" className="text-primary hover:underline">CU Token</a></li>
+                </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🛰️ Satellite Bank System</h2>
                 <p className="mt-6">
                   The Satellite Bank is a modular contract system, built using the Diamond Standard (ERC-2535), designed to support 2nd-party games and applications within the Crypto Unicorns ecosystem.
                 </p>
 
-                <div className="mt-8">
-                  <a href="https://github.com/Laguna-Games/cu-osc-satbank" className="text-primary hover:underline">
-                    🔗 Satellite Bank Technical Implementation
-                  </a>
-                </div>
-                <p className="mt-4">
-                  It enables secure, scalable, and customizable in-game economies while maintaining full composability with the core game.
-                </p>
-
                 <h3 className="mt-8 text-xl font-semibold">🔑 Key Features</h3>
-                <ul className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4 list-disc pl-6 marker:text-white">
                   <li>
                     <strong>Isolated Token Balances</strong><br />
                     Each integrated game or app maintains its own asset balances, ensuring data separation and game-specific logic.
@@ -73,7 +84,7 @@ export default function CU2PLoop() {
                 </ul>
 
                 <h3 className="mt-8 text-xl font-semibold">🔐 Advanced Capabilities</h3>
-                <ul className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4  list-disc pl-6 marker:text-white">
                   <li>
                     <strong>Queue + Server-Side Signing</strong><br />
                     Onchain queue system with server-side signature validation to enable fair, tamper-proof reward claims.
@@ -87,6 +98,8 @@ export default function CU2PLoop() {
                     Supports publisher-specific logic such as fee handling for in-app purchases.
                   </li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">The Casual Gaming Experience</h2>
 
@@ -110,6 +123,8 @@ export default function CU2PLoop() {
                   <li>Community building features</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h3 className="mt-8 text-xl font-semibold">Unigatchi</h3>
                 <div className="mt-8">
                   <Image
@@ -129,6 +144,8 @@ export default function CU2PLoop() {
                   <li>Earn rewards through consistent play</li>
                   <li>Socialize with other players&apos; Unicorns</li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h3 className="mt-8 text-xl font-semibold">Rainbow Rumble</h3>
                 <div className="mt-8">
@@ -150,6 +167,8 @@ export default function CU2PLoop() {
                   <li>Special power-ups and abilities</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h3 className="mt-8 text-xl font-semibold">Unicorn Bingo</h3>
                 <div className="mt-8">
                   <Image
@@ -165,6 +184,8 @@ export default function CU2PLoop() {
                   <li>Community events and tournaments</li>
                   <li>Shared rewards pool with main game</li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h3 className="mt-8 text-xl font-semibold">Bumpercorns</h3>
                 <div className="mt-8">
@@ -182,6 +203,8 @@ export default function CU2PLoop() {
                   <li>Integrated leaderboard system</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h3 className="mt-8 text-xl font-semibold">Mob Run</h3>
                 <div className="mt-8">
                   <Image
@@ -198,6 +221,8 @@ export default function CU2PLoop() {
                   <li>Shared resource pool with main game</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">💰 Economic Integration</h2>
                 <p className="mt-6">
                   The casual and second-party games contribute to the ecosystem through:
@@ -209,6 +234,8 @@ export default function CU2PLoop() {
                   <li><strong>Economic Growth:</strong> Additional utility for core game assets</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🕹️ Player Benefits</h2>
 
                 <h3 className="mt-8 text-xl font-semibold">1. Accessibility</h3>
@@ -218,12 +245,16 @@ export default function CU2PLoop() {
                   <li>Varied gameplay experiences</li>
                 </ul>
 
+
+
                 <h3 className="mt-8 text-xl font-semibold">2. Progression</h3>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
                   <li>Cross-game progression systems</li>
                   <li>Shared achievement systems</li>
                   <li>Unified reward structures</li>
                 </ul>
+
+
 
                 <h3 className="mt-8 text-xl font-semibold">3. Community</h3>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
@@ -232,13 +263,12 @@ export default function CU2PLoop() {
                   <li>Community events across games</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏁 Conclusion</h2>
                 <p className="mt-6">
                   Crypto Unicorns&apos; approach to casual and second-party games represents a significant innovation in blockchain gaming. 
                   By creating an inclusive ecosystem that caters to different types of players, the project has successfully expanded its reach while maintaining the integrity of its core economy.
-                </p>
-                <p className="mt-4">
-                  This demonstrates how blockchain games can create diverse gaming experiences that appeal to a wide range of players while maintaining a cohesive economic system.
                 </p>
               </div>
             </div>

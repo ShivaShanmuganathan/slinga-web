@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import Blog from "@/components/sections/blog";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -11,7 +12,7 @@ export default function CUTwilight() {
         <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
-              <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
+              <p className="text-base font-semibold leading-7 text-primary">Blog</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 Twilight Tactics & Shadowforge
               </h1>
@@ -30,6 +31,24 @@ export default function CUTwilight() {
                 />
               </div>
 
+              <h2 className="mt-16 text-2xl font-bold tracking-tight">Technical Implementation</h2>
+
+                <p className="mt-4">
+                The twilight tactics battle loop was built using a <strong>modular Diamond architecture</strong>, enabling <strong>facet-level upgrades</strong> and <strong>gas optimization</strong>.
+                  Implemented the onchain queue system for rewards distribution.
+                </p>
+
+                <ul className="mt-4 space-y-2 list-none pl-6">
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowforge" className="text-primary hover:underline">Shadowforge</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Crypto Unicorns</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-items" className="text-primary hover:underline">Unicorn & Shadowcorn Items</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-rituals" className="text-primary hover:underline">Rituals</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-dark-marks" className="text-primary hover:underline">Dark Marks Token</a></li>
+                </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
               {/* Article Content */}
               <div className="mt-10 max-w-2xl">
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🌘 Twilight Tactics & Shadowforge</h2>
@@ -44,6 +63,8 @@ export default function CUTwilight() {
                   Shadowcorns to breed and lead powerful squads into the Dark Forest, where Unicorns rise to challenge them across five contested regions.
                 </p>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🚀 Gameplay Outcome Snapshot – Season 1</h2>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
                   <li><strong>$1.5M+ in rewards distributed</strong></li>
@@ -54,12 +75,8 @@ export default function CUTwilight() {
                   <li>Supported strategic PvP on a live, composable economy with <strong>$3M+ TVL</strong> and over <strong>8M+ NFT assets</strong></li>
                 </ul>
 
-                <h2 className="mt-16 text-2xl font-bold tracking-tight">💻 Technical Implementation</h2>
-                <h3 className="mt-8 text-xl font-semibold">🔧 Diamond Standard (ERC-2535)</h3>
-                <p className="mt-4">
-                  Entire system was built using a <strong>modular Diamond architecture</strong>, enabling <strong>facet-level upgrades</strong> and <strong>gas optimization</strong>.
-                </p>
-
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+                
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">⚔️ Shadowforge: Breeding the War Machine</h2>
                 <p className="mt-6">
                   The <strong>Shadowforge</strong> is a production contract where Shadowcorns breed <strong>Minions</strong>, who are later deployed into <strong>squads</strong> for Twilight Tactics.
@@ -81,6 +98,8 @@ export default function CUTwilight() {
                   />
                 </div>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🗺️ Twilight Tactics</h2>
                 <p className="mt-6">
                   Twilight Tactics unfolds across <strong>5 regions</strong>, each tied to a Shadowcorn class:
@@ -101,6 +120,7 @@ export default function CUTwilight() {
                     className="rounded-xl"
                   />
                 </div>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h3 className="mt-8 text-xl font-semibold">🧠 Squad Composition</h3>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
@@ -108,6 +128,7 @@ export default function CUTwilight() {
                   <li><strong>Shadowcorn Squads</strong>: 1 Shadowcorn + up to 10 Minions</li>
                   <li><strong>Power Calculation</strong>: Complex formulas considering class advantages, traits, and regional bonuses</li>
                 </ul>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">💎 Economic Model</h2>
                 <h3 className="mt-8 text-xl font-semibold">Territory Control Benefits</h3>
@@ -130,6 +151,7 @@ export default function CUTwilight() {
                     className="rounded-xl"
                   />
                 </div>
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🔄 Seasonal Cycles</h2>
                 <p className="mt-6">
@@ -157,6 +179,8 @@ export default function CUTwilight() {
                   <li>Season-end leaderboard prizes</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🦄 Unicorn vs Shadowcorn Combat</h2>
                 <h3 className="mt-8 text-xl font-semibold">🎯 Unicorn Players</h3>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
@@ -176,6 +200,8 @@ export default function CUTwilight() {
                   />
                 </div>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h3 className="mt-8 text-xl font-semibold">💀 Death & Burn Mechanics</h3>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
                   <li>Minions can die even in victory; <strong>all Minions in losing squads are burned</strong></li>
@@ -193,6 +219,8 @@ export default function CUTwilight() {
                   />
                 </div>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🧪 Combat Formula</h2>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
                   <li>Each squad&apos;s <strong>stats are converted into total Damage</strong></li>
@@ -209,6 +237,8 @@ export default function CUTwilight() {
                     className="rounded-xl"
                   />
                 </div>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">💰 End-of-Season Rewards</h2>
                 <ul className="mt-4 space-y-2 list-disc pl-6 marker:text-white">
@@ -233,6 +263,8 @@ export default function CUTwilight() {
                   />
                 </div>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🎯 Game Design Goals of Twilight Tactics</h2>
                 <ol className="mt-4 space-y-2 list-decimal pl-6 marker:text-white">
                   <li><strong>Player Agency:</strong> Unicorn players choose their opponents</li>
@@ -241,6 +273,8 @@ export default function CUTwilight() {
                   <li><strong>Accessibility:</strong> No fees beyond gas (reimbursed)</li>
                   <li><strong>Squad PvP at Scale:</strong> Full onchain coordination</li>
                 </ol>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏁 Conclusion</h2>
                 <p className="mt-6">

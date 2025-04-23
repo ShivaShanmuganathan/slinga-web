@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import Blog from "@/components/sections/blog";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -11,7 +12,7 @@ export default function CUTradingSystems() {
         <div className="border-x border-t">
           <div className="px-4 py-10 sm:px-6 lg:px-8 pb-24">
             <div className="mx-auto max-w-3xl text-base leading-7">
-              <p className="text-base font-semibold leading-7 text-primary">Case Study</p>
+              <p className="text-base font-semibold leading-7 text-primary">Blog</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 Crypto Unicorns: Trading & Distribution Systems
               </h1>
@@ -38,6 +39,22 @@ export default function CUTradingSystems() {
                   Together, these systems create a robust economy for both primary and secondary market activities.
                 </p>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
+                <h2 className="mt-16 text-2xl font-bold tracking-tight">Technical Implementation</h2>
+                <p className="mt-6">
+                  The battle loop is powered by the below diamond standard smart contracts:
+                </p>
+                <ul className="mt-4 space-y-2 list-none pl-6">
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-marketplace" className="text-primary hover:underline">Marketplace</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-items" className="text-primary hover:underline">Unicorn & Shadowcorn Items</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-land" className="text-primary hover:underline">Land NFTs</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-rituals" className="text-primary hover:underline">Rituals</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-public" className="text-primary hover:underline">CU Token</a></li>
+                </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏪 NFT Marketplace</h2>
                 <p className="mt-6">
                   The Crypto Unicorns Marketplace enables efficient trading of all game assets while maintaining economic balance through specialized mechanisms.
@@ -61,6 +78,8 @@ export default function CUTradingSystems() {
                   <li><strong>Batch Operations:</strong> Efficient bulk trading capabilities</li>
                 </ul>
 
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
+
                 <h3 className="mt-8 text-xl font-semibold">🎁 Marketplace Bundles</h3>
                 <div className="mt-8">
                   <Image
@@ -76,6 +95,8 @@ export default function CUTradingSystems() {
                   This provided convenience for sellers and composability for buyers looking to acquire synergistic sets of NFTs in one transaction. 
                   Bundles were especially useful for onboarding new players looking for a &quot;ready-to-play&quot; setup.
                 </p>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏧 Land Vending Machine</h2>
                 <p className="mt-6">
@@ -109,7 +130,7 @@ export default function CUTradingSystems() {
                   </li>
                   <li>
                     <strong>Onchain Crafting + Bridging</strong><br />
-                    Keystones were crafted in-game, then "unlocked" to player wallets for use in the vending machine — creating a seamless bridge between in-game assets and onchain utility.
+                    Keystones were crafted in-game, then &quot;unlocked&quot; to player wallets for use in the vending machine — creating a seamless bridge between in-game assets and onchain utility.
                   </li>
                   <li>
                     <strong>Gas-Optimized Architecture</strong><br />
@@ -124,6 +145,8 @@ export default function CUTradingSystems() {
                     Built-in price impact calculations
                   </li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">💰 Economic Impact</h2>
                 <p className="mt-6">
@@ -145,6 +168,8 @@ export default function CUTradingSystems() {
                   <li>1,000+ daily active traders</li>
                   <li>Efficient price discovery</li>
                 </ul>
+
+                <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
                 <h2 className="mt-16 text-2xl font-bold tracking-tight">🏁 Conclusion</h2>
                 <p className="mt-6">
