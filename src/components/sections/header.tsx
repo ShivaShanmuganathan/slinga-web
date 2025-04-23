@@ -32,7 +32,10 @@ export function Header() {
             className="cursor-pointer"
           >
             <RainbowButton>
-              {siteConfig.cta}
+            <span className='absolute left-0 top-0 size-full rounded-xl border border-dashed border-black shadow-inner shadow-white/30 group-active:shadow-white/10'></span>
+            <span className='absolute left-0 top-0 size-full rotate-180 rounded-md border-black shadow-inner shadow-black/30 group-active:shadow-black/10'></span>
+            <strong>{siteConfig.cta}</strong>
+              
             </RainbowButton>
           </div>
         </div>

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { lazy, Suspense, useEffect, useState } from "react";
+import { RainbowButton } from "../magicui/rainbow-button";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -59,6 +60,16 @@ function HeroTitles() {
 }
 
 function HeroCTA() {
+  const handleScroll = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('calendar');
+    if (element) {
+      const yOffset = -100; // Adjust this value to offset the scroll position
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative mt-6">
       <motion.div
@@ -68,14 +79,16 @@ function HeroCTA() {
         transition={{ delay: 0.8, duration: 0.8, ease }}
       >
         <Link
-          href="#calendar"
-          className={cn(
-            buttonVariants({ variant: "default" }),
-            "w-full sm:w-auto text-background flex gap-2 rounded-lg"
-          )}
+          href="/#calendar"
+          onClick={handleScroll}
         >
-          <Icons.logo className="h-6 w-6" />
-          {siteConfig.hero.cta}
+          <RainbowButton>
+            <span className='absolute left-0 top-0 size-full rounded-xl border border-dashed border-black shadow-inner shadow-white/30 group-active:shadow-white/10'></span>
+            <span className='absolute left-0 top-0 size-full rotate-180 rounded-md border-black shadow-inner shadow-black/30 group-active:shadow-black/10'></span>
+            <strong>
+              {siteConfig.hero.cta}
+            </strong>
+          </RainbowButton>
         </Link>
       </motion.div>
       <motion.p

@@ -16,7 +16,7 @@ export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
   name: "SHIVA SHANMUGANATHAN",
-  cta: "Press 🅱️ to book a call",
+  cta: "Press 🅱️ To Book A Call",
   description:
     "Smart Contract Engineer specializing in Web3 and blockchain technology. Building secure and scalable decentralized applications.",
   url: "https://slinga.xyz",
@@ -38,7 +38,7 @@ export const siteConfig = {
     title: "Production Grade Smart Contracts",
     description:
       "In 3+ years of protocol engineering, I’ve shipped contracts that power onchain games, DeFi, staking systems, and token economies.",
-    cta: "Get in Touch",
+    cta: "Get In Touch",
     ctaDescription: "Secure smart contracts. Delivered fast.",
   },
   features: [

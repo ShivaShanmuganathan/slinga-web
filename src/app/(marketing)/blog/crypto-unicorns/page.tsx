@@ -98,6 +98,16 @@ export default function CryptoUnicorns() {
                   millions of transactions, multiple game loops, and a wide NFT ecosystem. 
                   The core of the architecture was built using the Diamond Standard (ERC-2535) to enable upgradable, gas-efficient, and extensible smart contracts.
                 </p>
+                <ul className="mt-4 space-y-2 list-none pl-6">
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unicorns" className="text-primary hover:underline">Unicorns NFT</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-shadowcorns" className="text-primary hover:underline">Shadowcorns NFT</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-land" className="text-primary hover:underline">Land NFT</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-public" className="text-primary hover:underline">CU Token</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-unim" className="text-primary hover:underline">Unicorn Milk</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-staking-badges" className="text-primary hover:underline">Staking Badges</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-native-arb-bridge" className="text-primary hover:underline">Native Arb Bridge</a></li>
+                  <li className="flex items-center gap-2"><Github className="w-4 h-4" /><a href="https://github.com/Laguna-Games/cu-osc-layerzero" className="text-primary hover:underline">LayerZero</a></li>
+                </ul>
 
                 <div className="my-8 h-[1px] w-full bg-zinc-800" />
 
