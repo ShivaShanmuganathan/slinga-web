@@ -49,7 +49,7 @@ export default function CryptoUnicorns() {
                     <span className="mt-1 h-5 w-5 flex-none text-primary">1.</span>
                     <span>
                       <strong className="font-semibold text-gray-900 dark:text-white">
-                      Crypto Unicorns sold $45M in digital assets 
+                      Crypto Unicorns sold $25M in digital assets 
                       </strong>{" "}
                     </span>
                   </li>

@@ -30,7 +30,7 @@ export const caseStudies: CaseStudy[] = [
     description: 'A modular ecosystem of NFT-powered farming, breeding, and PvP loops. I helped scale this protocol with fully onchain mechanics, Diamond Standard upgrades, and production systems tied to staking, land, and class-based battles.',
     metrics: [
       '$100M TVL',
-      '45M+ NFTs minted',
+      '$25M+ NFTs minted',
       '70%+ retention via reward mechanics'
     ],
     builtItems: [

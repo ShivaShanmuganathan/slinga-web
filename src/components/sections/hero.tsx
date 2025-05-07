@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { RainbowButton } from "../magicui/rainbow-button";
+import { Download } from "lucide-react";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -89,6 +90,24 @@ function HeroCTA() {
               {siteConfig.hero.cta}
             </strong>
           </RainbowButton>
+        </Link>
+        <Link
+          href="/Shiva-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            buttonVariants({ variant: "outline" }),
+            "group relative bg-transparent border-dashed border-gray-500 text-white hover:bg-gray-800/50 hover:text-white rounded-2xl transition-all duration-300",
+            "hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:border-white/50"
+          )}
+        >
+          <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="relative flex items-center gap-2">
+            <Download className="w-4 h-4" />
+            <strong>
+              Resume
+            </strong>
+          </div>
         </Link>
       </motion.div>
       <motion.p

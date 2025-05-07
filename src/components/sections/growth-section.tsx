@@ -19,7 +19,7 @@ const stats = [
     icon: <Icons.code className="h-5 w-5" />,
   },
   {
-    title: "$70M+",
+    title: "$100M+",
     subtitle: "Onchain value secured",
     icon: <Icons.rocket className="h-5 w-5" />,
   },
