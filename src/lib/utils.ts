@@ -15,7 +15,7 @@ export function absoluteUrl(path: string) {
 export function constructMetadata({
   title = siteConfig.name,
   description = siteConfig.description,
-  image = absoluteUrl("/og"),
+  image = absoluteUrl("/shiva-portfolio.png"),
   ...props
 }: {
   title?: string;

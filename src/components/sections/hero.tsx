@@ -92,7 +92,7 @@ function HeroCTA() {
           </RainbowButton>
         </Link>
         <Link
-          href="/Shiva-Resume.pdf"
+          href="/Shiva-CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
