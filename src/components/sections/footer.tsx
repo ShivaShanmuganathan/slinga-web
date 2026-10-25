@@ -40,6 +40,7 @@ export function Footer() {
           <p>{siteConfig.footer.bottomText}</p>
         </div>
       </div> */}
+      <p className="text-sm text-muted-foreground py-5">I build consumer apps and software products at <a href="https://lingatechnologies.in/" className="underline underline-offset-4 hover:text-foreground">LINGA Technologies</a>, my independent product studio in Chennai.</p>
       <BorderText
         text={siteConfig.footer.brandText}
         className="text-[clamp(3rem,15vw,10rem)] overflow-hidden font-mono tracking-tighter font-medium"
